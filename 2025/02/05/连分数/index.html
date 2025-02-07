@@ -6,38 +6,17 @@
   <meta name="keywords" content=" Crypto , 数论 ">
   <meta name="description" content="连分数 | Qwe7sea_Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="rsa算法模数n&#x3D;p*q 欧拉数phi&#x3D;(p-1)*(q-1)，当p,q为素数时；phi&#x3D;p^k-p^(k-1)，当n&#x3D;p^k时 gcd(e,phi)&#x3D;1，即加密钥e和phi互质 d*e mod phi ，即解密钥d与e互为逆元 加密c&#x3D;(m^e) mod n &#x3D; pow(m,e,n) 解密m&#x3D;(c^d) mod n&amp;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="RSA加密">
-<meta property="og:url" content="http://example.com/2025/01/24/RSA%E7%9B%B8%E5%85%B3/index.html">
+<meta name="description" content="本博客使用Github+Hexo框架搭建  文章：篇；总字数：字； 访问人数：人，访问量：次。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
 <meta property="og:site_name" content="Qwe7sea_Blog">
-<meta property="og:description" content="rsa算法模数n&#x3D;p*q 欧拉数phi&#x3D;(p-1)*(q-1)，当p,q为素数时；phi&#x3D;p^k-p^(k-1)，当n&#x3D;p^k时 gcd(e,phi)&#x3D;1，即加密钥e和phi互质 d*e mod phi ，即解密钥d与e互为逆元 加密c&#x3D;(m^e) mod n &#x3D; pow(m,e,n) 解密m&#x3D;(c^d) mod n&amp;">
+<meta property="og:description" content="本博客使用Github+Hexo框架搭建  文章：篇；总字数：字； 访问人数：人，访问量：次。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/25907408/1715566461765-cc8347b4-677f-4003-afd2-1cb166ec8711.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/25907408/1715566461955-101fb1ff-cf70-4ed8-b17d-cb5adbc304c9.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/25907408/1715752650132-b516973b-371a-48fb-a3f0-f0621d94faf5.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/25907408/1736304885091-6523ad8e-8857-4a0b-95c4-342e7a15ea9a.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/25907408/1736304944328-7bd0921f-16a9-40b1-84ef-d5864a631285.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/25907408/1736305014700-d53d24bb-81a3-4df6-b691-e3ca719c8d82.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/25907408/1736305095256-041fcad2-fa6e-4fbd-b885-69ac91b293e4.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/25907408/1736305119042-3b9811f8-5b2b-48ec-9d2a-5173ccd19e0f.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/25907408/1714455868158-176858a5-3239-444c-8da7-cd7cdafc8d36.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/25907408/1733385426166-ad7c1489-9640-4eee-9bd5-9176d6afd96a.webp">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/25907408/1715667991075-9869c424-c5eb-4518-abaa-9ef4bb4294a2.webp">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/25907408/1737256443942-f06c3e59-a6b2-44a9-bc23-7748d04d04c3.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/25907408/1735032285481-311e031f-6455-4368-8dcd-749f2483aae7.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5f52b3afe4bf4ae63a03eb74294706a6.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/55380bc1775ac4065f9be69486a4e03a.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/4c1a983076d226f46884868dc4a4b6a5.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/webp/25907408/1715222785575-fc76f0bf-f91e-4d37-a958-c011e2156e9d.webp">
-<meta property="article:published_time" content="2025-01-24T01:56:53.321Z">
-<meta property="article:modified_time" content="2025-02-05T03:54:42.663Z">
+<meta property="article:published_time" content="2025-01-23T03:14:54.000Z">
+<meta property="article:modified_time" content="2025-02-06T14:11:31.760Z">
 <meta property="article:author" content="Qwe7sea">
-<meta property="article:tag" content="Crypto">
-<meta property="article:tag" content="RSA">
-<meta property="article:tag" content="大整数分解">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/25907408/1715566461765-cc8347b4-677f-4003-afd2-1cb166ec8711.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -187,7 +166,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="4">
-<input type="hidden" id="yelog_site_word_count" value="17.5k">
+<input type="hidden" id="yelog_site_word_count" value="17.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -340,12 +319,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-02-07 16:00:03'>2025-02-05 11:46</time>
+            发布时间 : <time class="date" title='最后更新: 2025-02-07 17:03:43'>2025-02-05 11:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:241</span>
+        <span>字数:504</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -386,6 +365,21 @@
 <p>$$<br>a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{…}}}}<br>$$</p>
 <p>$a_0$可以是任意整数，$a_i$是正整数$(i&gt;0)$：部分商（partial quotient）</p>
 <p>可简写为$[a_0,a_1,a_2,a_3,…]$</p>
+<p>例如：<br>$$<br>\begin{align}<br>\frac{43}{19} &amp;&#x3D; 2+\frac{1}{3+\frac{1}{1+\frac{1}{4}}}	\<br>&amp;&#x3D; [2,3,1,4]<br>\end{align}<br>$$</p>
+<ol start="2">
+<li>有限连分数</li>
+</ol>
+<p>简单连分数可以分为有限连分数和无线连分数。<br>$$<br>Q &#x3D; {\frac{a}{b}|a,b \in Z,b \neq 0}<br>$$<br><strong>定理：任何有理数都可以表示成有限连分数；任何有限连分数都是一个有理数。</strong></p>
+<p>$\frac{a}{b}$	—欧几里得算法—&gt;	$[a_0,a_1,…,a_n]$</p>
+<p>连分数还原成分数：$[a_0,a_1,…,a_n] &#x3D; [a_0,…,a_m,[a_{m+1},…,a_n]]$<br>$$<br>\begin{align}<br>[a_0,a_1,…,a_n] &amp;&#x3D; a_0+\frac{1}{a_1+\frac{1}{…+\frac{1}{a_n}}} \<br>&amp;&#x3D; \frac{a_0(a_1+\frac{1}{…+\frac{1}{a_n}})+1}{a_1+\frac{1}{…+\frac{1}{a_n}}}	\<br>&amp;&#x3D; \frac{a_0[a_1,…,a_n]+1}{[a_1,…,a_n]}	\<br>&amp;&#x3D; \frac{a}{b}<br>\end{align}<br>$$</p>
+<p>有限连分数表示倒数</p>
+<p>例：</p>
+<p>$\frac{43}{19}$ 	—倒数—&gt;	$\frac{19}{43} &#x3D; \frac{1}{\frac{43}{19}}&#x3D;\frac{1}{[2,3,1,4]}&#x3D;0+\frac{1}{[2,3,1,4]}&#x3D;[0,2,3,1,4]$</p>
+<p><strong>给定有限连分数$[a_0,a_1,…,a_n]$,求倒数</strong></p>
+<ul>
+<li>如果$a_0 &#x3D; 0$，就把0去掉：$[a_1,…,a_n]$</li>
+<li>如果$a_0 \neq 0$，就在前面补上0：$[0,a_0,a_1,…,a_n]$</li>
+</ul>
 <h1 id="连分数理论"><a href="#连分数理论" class="headerlink" title="连分数理论"></a>连分数理论</h1><p>连分数理论（了解连分数、无穷级数等基本概念，熟悉最佳有理数逼近、循环连分数展开、佩尔方程求解等运算过程）</p>
 <h1 id="连分数逼近"><a href="#连分数逼近" class="headerlink" title="连分数逼近"></a>连分数逼近</h1><p>例题：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> secret <span class="keyword">import</span> flag</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">m1 = bytes_to_long(flag[:<span class="built_in">len</span>(flag) // <span class="number">2</span>])</span><br><span class="line">m2 = bytes_to_long(flag[<span class="built_in">len</span>(flag) // <span class="number">2</span>:])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gen</span>(<span class="params">pbits, qbits</span>):</span><br><span class="line">    p1, q1 = getPrime(pbits), getPrime(qbits)</span><br><span class="line">    n1 = p1**<span class="number">4</span>*q1</span><br><span class="line">    q2 = getPrime(qbits)</span><br><span class="line">    bound = p1 // (<span class="number">8</span>*q1*q2) + <span class="number">1</span></span><br><span class="line">    p2 = random.randrange(p1, p1 + bound)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> isPrime(p2):</span><br><span class="line">        p2 = random.randrange(p1, p1 + bound)</span><br><span class="line">    n2 = p2**<span class="number">4</span>*q2</span><br><span class="line">    <span class="keyword">return</span> (n1, n2), (p1, q1), (p2, q2)</span><br><span class="line"></span><br><span class="line">e = <span class="number">0x10001</span></span><br><span class="line">pbits = <span class="built_in">int</span>(<span class="number">360</span>)</span><br><span class="line">qbits = <span class="built_in">int</span>(<span class="number">128</span>)</span><br><span class="line">pk, sk1, sk2 = gen(pbits, qbits)</span><br><span class="line">c1 = <span class="built_in">pow</span>(m1, e, pk[<span class="number">0</span>])</span><br><span class="line">c2 = <span class="built_in">pow</span>(m2, e, pk[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;pk = <span class="subst">&#123;pk&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c1, c2 = <span class="subst">&#123;c1, c2&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">pk = (1150398070565459492080597718626032792435556703413923483458704675295997646493249759818468321328556510074044954676615760446708253531839417036997811506222349194302791943489195718713797322878586379546657275419261647635859989280700191441312691274285176619391539387875252135478424580680264554294179123254566796890998243909286508189826458854346825493157697201495100628216832191035903848391447704849808577310612723700318670466035077202673373956324725108350230357879374234418393233, 1242678737076048096780023147702514112272319497423818488193557934695583793070332178723043194823444815153743889740338870676093799728875725651036060313223096288606947708155579060628807516053981975820338028456770109640111153719903207363617099371353910243497871090334898522942934052035102902892149792570965804205461900841595290667647854346905445201396273291648968142608158533514391348407631818144116768794595226974831093526512117505486679153727123796834305088741279455621586989)</span></span><br><span class="line"><span class="string">c1, c2 = (361624030197288323178211941746074961985876772079713896964822566468795093475887773853629454653096485450671233584616088768705417987527877166166213574572987732852155320225332020636386698169212072312758052524652761304795529199864805108000796457423822443871436659548626629448170698048984709740274043050729249408577243328282313593461300703078854044587993248807613713896590402657788194264718603549894361488507629356532718775278399264279359256975688280723740017979438505001819438, 33322989148902718763644384246610630825314206644879155585369541624158380990667828419255828083639294898100922608833810585530801931417726134558845725168047585271855248605561256531342703212030641555260907310067120102069499927711242804407691706542428236208695153618955781372741765233319988193384708525251620506966304554054884590718068210659709406626033891748214407992041364462525367373648910810036622684929049996166651416565651803952838857960054689875755131784246099270581394)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
