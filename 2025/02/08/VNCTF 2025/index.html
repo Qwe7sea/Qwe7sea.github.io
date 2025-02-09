@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>部署 | Qwe7sea_Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="部署 | Qwe7sea_Blog">
+  <title>VNCTF 2025 | Qwe7sea_Blog</title>
+  <meta name="keywords" content=" Crypto , CRT ">
+  <meta name="description" content="VNCTF 2025 | Qwe7sea_Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="本博客使用Github+Hexo框架搭建  文章：篇；总字数：字； 访问人数：人，访问量：次。">
 <meta property="og:type" content="website">
@@ -316,24 +316,43 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-部署" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-VNCTF 2025" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">部署</h1>
+        <h1 class="article-title">VNCTF 2025</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a> > 
+            
+            <a  data-rel="密码学&lt;---&gt;CTF比赛">CTF比赛</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Crypto</a>
+            
+            <a class="color4">CRT</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-02-06 21:52:27'>2025-01-22 18:26</time>
+            发布时间 : <time class="date" title='最后更新: 2025-02-08 11:53:14'>2025-02-08 11:32</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:118</span>
+        <span>字数:437</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -352,7 +371,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text">部署</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VNCTF-2025"><span class="toc-text">VNCTF 2025</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98"><span class="toc-text">解题</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -368,28 +387,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>部署参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/lang_xw/article/details/143050877">https://blog.csdn.net/lang_xw/article/details/143050877</a></p>
-<p>使用命令：</p>
-<ul>
-<li><p>安装：npm install -g hexo-cli</p>
-<ul>
-<li>报错的话，就换源：npm config set registry <a target="_blank" rel="noopener" href="https://registry.npmjs.org/">https://registry.npmjs.org/</a></li>
-</ul>
-</li>
-<li><p>hexo init    &#x2F;&#x2F;初始化</p>
-</li>
-<li><p>hexo clean	&#x2F;&#x2F;清除缓存</p>
-</li>
-<li><p>hexo g   &#x2F;&#x2F;生成静态文件</p>
-</li>
-<li><p>hexo s    &#x2F;&#x2F;启动服务预览</p>
-</li>
-<li><p>hexo d    &#x2F;&#x2F; 部署到服务上</p>
-</li>
-</ul>
-<p>框架主题：git clone <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">git@github.com</a>:yelog&#x2F;hexo-theme-3-hexo.git</p>
-<p>框架使用参考：<a target="_blank" rel="noopener" href="https://yelog.org/2017/03/23/3-hexo-instruction/">https://yelog.org/2017/03/23/3-hexo-instruction/</a></p>
+        <h1 id="VNCTF-2025"><a href="#VNCTF-2025" class="headerlink" title="VNCTF 2025"></a>VNCTF 2025</h1><p>题目easymath.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> secret <span class="keyword">import</span> flag</span><br><span class="line">flag=bytes_to_long(flag)</span><br><span class="line">l=flag.bit_length()//<span class="number">3</span> + <span class="number">1</span></span><br><span class="line">n=[]</span><br><span class="line">N=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">len</span>(n) &lt; <span class="number">3</span>:</span><br><span class="line">    p = <span class="number">4</span>*getPrime(l)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> isPrime(p):</span><br><span class="line">        n.append(p)</span><br><span class="line">        N *= p</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c=<span class="subst">&#123;flag*flag%N&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> symbols, expand</span><br><span class="line">x = symbols(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">polynomial = expand((x - n[<span class="number">0</span>]) * (x - n[<span class="number">1</span>]) * (x - n[<span class="number">2</span>]))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;polynomial=&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># c=24884251313604275189259571459005374365204772270250725590014651519125317134307160341658199551661333326703566996431067426138627332156507267671028553934664652787411834581708944</span></span><br><span class="line"><span class="comment"># polynomial=x**3 - 15264966144147258587171776703005926730518438603688487721465*x**2 + 76513250180666948190254989703768338299723386154619468700730085586057638716434556720233473454400881002065319569292923*x - 125440939526343949494022113552414275560444252378483072729156599143746741258532431664938677330319449789665352104352620658550544887807433866999963624320909981994018431526620619</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h3><p>expand()会将因式展开成多项式，例如$(x−1)(x−2)(x−3)$展开后的结果是：$x^3−6x^2+11x−6$。</p>
+<p>根据多项式展开的结果联立方程可以解出n0,n1,n2</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> symbols, Eq, solve</span><br><span class="line"><span class="comment"># p(x)=x^3 + a2*x^2 + a1*x + a0</span></span><br><span class="line"><span class="comment">#x**3 - 15264966144147258587171776703005926730518438603688487721465*x**2 + 76513250180666948190254989703768338299723386154619468700730085586057638716434556720233473454400881002065319569292923*x - 125440939526343949494022113552414275560444252378483072729156599143746741258532431664938677330319449789665352104352620658550544887807433866999963624320909981994018431526620619</span></span><br><span class="line">n0,n1,n2 = symbols(<span class="string">&#x27;n0,n1,n2&#x27;</span>)</span><br><span class="line">a2 = <span class="number">15264966144147258587171776703005926730518438603688487721465</span></span><br><span class="line">a1 = <span class="number">76513250180666948190254989703768338299723386154619468700730085586057638716434556720233473454400881002065319569292923</span></span><br><span class="line">a0 = <span class="number">125440939526343949494022113552414275560444252378483072729156599143746741258532431664938677330319449789665352104352620658550544887807433866999963624320909981994018431526620619</span></span><br><span class="line">eq1=Eq(n0+n1+n2,a2)</span><br><span class="line">eq2=Eq(n0*n1+n1*n2+n0*n2,a1)</span><br><span class="line">eq3=Eq(n0*n1*n2,a0)</span><br><span class="line">s = solve((eq1,eq2,eq3),(n0,n1,n2))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<p>解出n0,n1,n2后，$N &#x3D; n0 * n1 * n2$</p>
+<p>$c &#x3D; flag^2 % N$，由于N由三个素数相乘且素数因子已知，</p>
+<p>所以可以分别对每个素因子求平方根，然后使用CRT中国剩余定理组合这些结果以获得最终答案</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">c =</span><br><span class="line">n0 = 5908636118089697338533572785710162817248001570348495067227</span><br><span class="line">n1 = 5487564316951417093934647798659941512646442958127439071827</span><br><span class="line">n2 = 3868765709106144154703556118635822400623994075212553582411 </span><br><span class="line">N = n0*n1*n2</span><br><span class="line"></span><br><span class="line">from sympy import sqrt_mod</span><br><span class="line">from sympy.ntheory.modular import solve_congruence</span><br><span class="line"></span><br><span class="line"># 对每个素数因子求 c 的模平方根，并考虑两个可能的根</span><br><span class="line">sqrt_c_mod_n0 = sqrt_mod(c, n0, all_roots=True)</span><br><span class="line">sqrt_c_mod_n1 = sqrt_mod(c, n1, all_roots=True)</span><br><span class="line">sqrt_c_mod_n2 = sqrt_mod(c, n2, all_roots=True)</span><br><span class="line"></span><br><span class="line"># 输出所有可能的 flag 组合</span><br><span class="line">possible_flags = []</span><br><span class="line">for root_n0 in sqrt_c_mod_n0:</span><br><span class="line">    for root_n1 in sqrt_c_mod_n1:</span><br><span class="line">        for root_n2 in sqrt_c_mod_n2:</span><br><span class="line">            try:</span><br><span class="line">                # 使用中国剩余定理找到符合条件的 flag</span><br><span class="line">                flag, _ = solve_congruence((root_n0, n0), (root_n1, n1), (root_n2, n2))</span><br><span class="line">                possible_flags.append(flag)</span><br><span class="line">            except Exception as e:</span><br><span class="line">                print(f&quot;Skipping invalid combination due to error: &#123;e&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># 去除重复值并打印结果</span><br><span class="line">possible_flags = list(set(possible_flags))</span><br><span class="line">for flag in possible_flags:</span><br><span class="line">    print(long_to_bytes(flag))</span><br><span class="line">    </span><br><span class="line">#VNCTF&#123;90dcfb2dfb21a21e0c8715cbf3643f4a47d3e2e4b3f7b7975954e6d9701d9648&#125;</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源 </span>
     </div>
@@ -405,6 +413,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
