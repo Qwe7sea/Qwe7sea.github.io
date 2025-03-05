@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>about | Qwe7sea_Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="about | Qwe7sea_Blog">
+  <title>已知高位攻击 | Qwe7sea_Blog</title>
+  <meta name="keywords" content=" Crypto , Coppersmith ">
+  <meta name="description" content="已知高位攻击 | Qwe7sea_Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="已知高位攻击 参考https:&#x2F;&#x2F;weichujian.github.io&#x2F;博客  已知高位攻击分为三种情况：  已知P的高位 已知d的高位 已知m的高位  已知P的高位适用于：  知道p的高位为p的位数的约1&#x2F;2时即可  已知e,n爆破 1024的P，至少需要知道前576位二进制，即前144位16进制(特殊情况下，可能所得到的已知位数稍小于144位，需要爆破两三位，然后使用sage脚本">
 <meta property="og:type" content="article">
@@ -391,24 +391,43 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-已知高位攻击" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">已知高位攻击</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a> > 
+            
+            <a  data-rel="密码学&lt;---&gt;Coppersmith">Coppersmith</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Crypto</a>
+            
+            <a class="color2">Coppersmith</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-02-06 22:11:31'>2025-01-23 11:14</time>
+            发布时间 : <time class="date" title='最后更新: 2025-03-05 17:43:51'>2025-03-05 17:04</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:27</span>
+        <span>字数:681</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -427,7 +446,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E9%AB%98%E4%BD%8D%E6%94%BB%E5%87%BB"><span class="toc-text">已知高位攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5P%E7%9A%84%E9%AB%98%E4%BD%8D"><span class="toc-text">已知P的高位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5d%E7%9A%84%E9%AB%98%E4%BD%8D"><span class="toc-text">已知d的高位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%98%8E%E6%96%87m%E7%9A%84%E9%AB%98%E4%BD%8D"><span class="toc-text">已知明文m的高位</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -443,11 +462,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本博客使用Github+Hexo框架搭建</p>
-<hr>
-<p>文章：<code class="article_number"></code>篇；总字数：<code class="site_word_count"></code>字；</p>
-<p>访问人数：<code class="site_uv"></code>人，访问量：<code class="site_pv"></code>次。</p>
+        <h1 id="已知高位攻击"><a href="#已知高位攻击" class="headerlink" title="已知高位攻击"></a>已知高位攻击</h1><blockquote>
+<p>参考<a target="_blank" rel="noopener" href="https://weichujian.github.io/%E5%8D%9A%E5%AE%A2">https://weichujian.github.io/博客</a></p>
+</blockquote>
+<p>已知高位攻击分为三种情况：</p>
+<ul>
+<li>已知P的高位</li>
+<li>已知d的高位</li>
+<li>已知m的高位</li>
+</ul>
+<h2 id="已知P的高位"><a href="#已知P的高位" class="headerlink" title="已知P的高位"></a>已知P的高位</h2><p>适用于：</p>
+<ul>
+<li><p>知道p的高位为p的位数的约1&#x2F;2时即可</p>
+</li>
+<li><p>已知e,n爆破 1024的P，至少需要知道前576位二进制，即前144位16进制(特殊情况下，可能所得到的已知位数稍小于144位，需要爆破两三位，然后使用sage脚本)</p>
+</li>
+<li><p>正好已知144位16进制的情况</p>
+</li>
+</ul>
+<p>exp1：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#p已知高位</span></span><br><span class="line">pl=</span><br><span class="line">n=</span><br><span class="line"><span class="comment">#p的全位数</span></span><br><span class="line">pbits=          </span><br><span class="line"><span class="comment">#缺省位数</span></span><br><span class="line">kbits=pbits - pl.nbits()</span><br><span class="line"><span class="built_in">print</span>(pl.nbits())</span><br><span class="line"></span><br><span class="line">pl = pl &lt;&lt; kbits</span><br><span class="line">PR.&lt;x&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">f = x + pl</span><br><span class="line">roots = f.small_roots(X=<span class="number">2</span>^kbits,beta=<span class="number">0.4</span>)</span><br><span class="line"><span class="keyword">if</span> roots:</span><br><span class="line">    p= pl + <span class="built_in">int</span>(roots[<span class="number">0</span>])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;p&quot;</span>,p)</span><br></pre></td></tr></table></figure>
 
+
+
+<p>exp2：已知142位16进制的情况</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">n=</span><br><span class="line">p4=            #已知P的高位,最后面8位二进制，也就是两位十六进制要参与爆破，所以要用00补充</span><br><span class="line">e=</span><br><span class="line">pbits=          #P原本的位数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for i in range(0,256):        # 要爆破的8位二进制数，为2**8==256，表示0~255</span><br><span class="line">    p4 =</span><br><span class="line">    p4 = p4 + int(hex(i),16)</span><br><span class="line">#print hex(p4)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kbits=pbits - p4.nbits()</span><br><span class="line">print p4.nbits()</span><br><span class="line">p4 = p4 &lt;&lt; kbits</span><br><span class="line">PR.&lt;x&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">f = x + p4</span><br><span class="line">roots = f.small_roots(X=2^kbits,beta=0.4)</span><br><span class="line"># 经过以上一些函数处理后，n和p已经被转化为10进制</span><br><span class="line">if roots:</span><br><span class="line">    p= p4 + int(roots[0])</span><br><span class="line">    print &quot;n&quot;,n</span><br><span class="line">    print &quot;p&quot;,p</span><br><span class="line">    print &quot;q&quot;,n/p</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="已知d的高位"><a href="#已知d的高位" class="headerlink" title="已知d的高位"></a>已知d的高位</h2><ul>
+<li>如果知道d的低位，低位约为n的位数的1&#x2F;4就可以恢复d。已知私钥的512位的低位 Partial Key Exposure Attack(部分私钥暴露攻击)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">partial_p</span>(<span class="params">p0, kbits, n</span>):</span><br><span class="line">    PR.&lt;x&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">    nbits = n.nbits() </span><br><span class="line">    f = <span class="number">2</span>^kbits*x + p0</span><br><span class="line">    f = f.monic()</span><br><span class="line">    roots = f.small_roots(X=<span class="number">2</span>^(nbits//<span class="number">2</span>-kbits), beta=<span class="number">0.3</span>)  <span class="comment"># find root &lt; 2^(nbits//2-kbits) with factor &gt;= n^0.3</span></span><br><span class="line">    <span class="keyword">if</span> roots:</span><br><span class="line">        x0 = roots[<span class="number">0</span>]</span><br><span class="line">        p = gcd(<span class="number">2</span>^kbits*x0 + p0, n)</span><br><span class="line">        <span class="keyword">return</span> ZZ(p)</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">find_p</span>(<span class="params">d0, kbits, e, n</span>):</span><br><span class="line">    X = var(<span class="string">&#x27;X&#x27;</span>) </span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, e+<span class="number">1</span>):</span><br><span class="line">        results = solve_mod([e*d0*X - k*X*(n-X+<span class="number">1</span>) + k*n == X], <span class="number">2</span>^kbits)</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> results:</span><br><span class="line">            p0 = ZZ(x[<span class="number">0</span>])</span><br><span class="line">            p = partial_p(p0, kbits, n)</span><br><span class="line">            <span class="keyword">if</span> p:</span><br><span class="line">                <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#d高位攻击</span></span><br><span class="line">n = </span><br><span class="line">e = </span><br><span class="line"><span class="comment">#已知d高位</span></span><br><span class="line">d = </span><br><span class="line"></span><br><span class="line">nbits = n.nbits()</span><br><span class="line">kbits = nbits - d.nbits()-<span class="number">1</span></span><br><span class="line">d0 = d &amp; (<span class="number">2</span>^kbits-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;lower %d bits (of %d bits) is given&quot;</span> % (kbits, nbits))</span><br><span class="line"></span><br><span class="line">p = find_p(d0, kbits, e, n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;p=&quot;</span>,p)</span><br><span class="line"></span><br><span class="line">q = n//p</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;d=&quot;</span>,inverse_mod(e, (p-<span class="number">1</span>)*(q-<span class="number">1</span>)))</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="已知明文m的高位"><a href="#已知明文m的高位" class="headerlink" title="已知明文m的高位"></a>已知明文m的高位</h2><p>适用于：</p>
+<ul>
+<li>已知明文的高位，是Stereotyped messages攻击 或 Lattice based attacks</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = <span class="number">0x2519834a6cc3bf25d078caefc5358e41c726a7a56270e425e21515d1b195b248b82f4189a0b621694586bb254e27010ee4376a849bb373e5e3f2eb622e3e7804d18ddb897463f3516b431e7fc65ec41c42edf736d5940c3139d1e374aed1fc3b70737125e1f540b541a9c671f4bf0ded798d727211116eb8b86cdd6a29aefcc7</span></span><br><span class="line">e = <span class="number">3</span></span><br><span class="line">m = randrange(n)</span><br><span class="line">c = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line">nbits = n.nbits()</span><br><span class="line"></span><br><span class="line">beta = <span class="number">1</span></span><br><span class="line">epsilon = beta^<span class="number">2</span>/<span class="number">7</span></span><br><span class="line">kbits = floor(nbits*(beta^<span class="number">2</span>/e-epsilon))</span><br><span class="line"></span><br><span class="line"><span class="comment">#mbar = m &amp; (2^nbits-2^kbits)</span></span><br><span class="line">mbar = <span class="number">0xb11ffc4ce423c77035280f1c575696327901daac8a83c057c453973ee5f4e508455648886441c0f3393fe4c922ef1c3a6249c12d21a000000000000000000</span></span><br><span class="line"></span><br><span class="line">c = <span class="number">0x1f6f6a8e61f7b5ad8bef738f4376a96724192d8da1e3689dec7ce5d1df615e0910803317f9bafb6671ffe722e0292ce76cca399f2af1952dd31a61b37019da9cf27f82c3ecd4befc03c557efe1a5a29f9bb73c0239f62ed951955718ac0eaa3f60a4c415ef064ea33bbd61abe127c6fc808c0edb034c52c45bd20a219317fb75</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;upper %d bits (of %d bits) is given&quot;</span> % (nbits-kbits, nbits))</span><br><span class="line"> </span><br><span class="line">PR.&lt;x&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">f = (mbar + x)^e - c</span><br><span class="line">x0 = f.small_roots(X=<span class="number">2</span>^kbits, beta=<span class="number">1</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;m =&quot;</span>,mbar + x0)</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源 </span>
     </div>
