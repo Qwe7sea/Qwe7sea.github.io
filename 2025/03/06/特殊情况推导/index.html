@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>部署 | Qwe7sea_Blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="部署 | Qwe7sea_Blog">
+  <title>特殊情况推导 | Qwe7sea_Blog</title>
+  <meta name="keywords" content=" Crypto ">
+  <meta name="description" content="特殊情况推导 | Qwe7sea_Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="本博客使用Github+Hexo框架搭建  文章：篇；总字数：字； 访问人数：人，访问量：次。">
 <meta property="og:type" content="website">
@@ -426,24 +426,41 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-部署" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-特殊情况推导" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">部署</h1>
+        <h1 class="article-title">特殊情况推导</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a> > 
+            
+            <a  data-rel="密码学&lt;---&gt;RSA">RSA</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Crypto</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-02-06 21:52:27'>2025-01-22 18:26</time>
+            发布时间 : <time class="date" title='最后更新: 2025-03-06 10:16:15'>2025-03-06 10:10</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:118</span>
+        <span>字数:260</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -462,7 +479,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text">部署</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AF%86%E6%96%87"><span class="toc-text">特殊密文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AF%86%E6%96%87%E4%B8%BAp%E7%9A%84%E5%80%8D%E6%95%B0"><span class="toc-text">1. 密文为p的倍数</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -478,27 +495,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>部署参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/lang_xw/article/details/143050877">https://blog.csdn.net/lang_xw/article/details/143050877</a></p>
-<p>使用命令：</p>
-<ul>
-<li><p>安装：npm install -g hexo-cli</p>
-<ul>
-<li>报错的话，就换源：npm config set registry <a target="_blank" rel="noopener" href="https://registry.npmjs.org/">https://registry.npmjs.org/</a></li>
-</ul>
-</li>
-<li><p>hexo init    &#x2F;&#x2F;初始化</p>
-</li>
-<li><p>hexo clean	&#x2F;&#x2F;清除缓存</p>
-</li>
-<li><p>hexo g   &#x2F;&#x2F;生成静态文件</p>
-</li>
-<li><p>hexo s    &#x2F;&#x2F;启动服务预览</p>
-</li>
-<li><p>hexo d    &#x2F;&#x2F; 部署到服务上</p>
-</li>
-</ul>
-<p>框架主题：git clone <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;">git@github.com</a>:yelog&#x2F;hexo-theme-3-hexo.git</p>
-<p>框架使用参考：<a target="_blank" rel="noopener" href="https://yelog.org/2017/03/23/3-hexo-instruction/">https://yelog.org/2017/03/23/3-hexo-instruction/</a></p>
+        <h1 id="特殊密文"><a href="#特殊密文" class="headerlink" title="特殊密文"></a>特殊密文</h1><h2 id="1-密文为p的倍数"><a href="#1-密文为p的倍数" class="headerlink" title="1. 密文为p的倍数"></a>1. 密文为p的倍数</h2><p>题目有：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">m</span>):</span><br><span class="line">    p = getPrime(<span class="number">1024</span>)</span><br><span class="line">    q = getPrime(<span class="number">1024</span>)</span><br><span class="line">    n = p * q</span><br><span class="line">    e = <span class="number">65537</span></span><br><span class="line">    M = <span class="number">2022</span> * m * <span class="number">1011</span> * p</span><br><span class="line">    c = <span class="built_in">pow</span>(M, e, n)</span><br><span class="line">    <span class="built_in">print</span>(&#123;<span class="string">&#x27;c&#x27;</span>: <span class="built_in">format</span>(c, <span class="string">&#x27;x&#x27;</span>), <span class="string">&#x27;n&#x27;</span>: <span class="built_in">format</span>(n, <span class="string">&#x27;x&#x27;</span>),<span class="string">&#x27;e&#x27;</span>:<span class="built_in">format</span>(e, <span class="string">&#x27;x&#x27;</span>)&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在c &#x3D;M ^e % n中：</p>
+<p>因为M是p的倍数，所以M ^e &#x3D; (k*p) ^e &#x3D;  k ^e * p ^e。因为p ^e必然是p的倍数，所以 M ^e mod  p &#x3D;0。<br>根据M ^e mod  p &#x3D;0，即M ^e是p的倍数，有c&#x3D;(k×p)mod(p×q)。因为 k×p 必然小于 p×q，所以c &#x3D; (k×p)mod(p×q) &#x3D; k×p。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = &#123;<span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;1bd2a47a5d275ba6356e1e2bd10d6c870693be540e9318c746e807a7672f3a75cc63841170126d7dba52d7f6f9cf0f8dce9705fc1785cc670b2658b05d4b24d8918f95594844bfa920c8ffe73160c2c313b3fdbc4541ec19828165e34afa7d05271cc6fd59d08138b88c11677e6ac3b39cff525dcb19694b0388d895f53805a5e5bd8cfb947080e4855aaf83ebd85a397526f7d76d26031386900cb44a2e4bd121412bcee7a6c1e9af411e234f130e68a428596265d3ec647e50f65cb81393f4bd38389a2b9010fd715582506b9054dc235aced50757462b77a5606f116853af0c1ea3c7cf0d304f885d86081f8bac8b67b0625122f75448c5b6eb8f1cc8a0df&#x27;</span>, <span class="string">&#x27;n&#x27;</span>: <span class="string">&#x27;c2b17c86a8950f6dafe0a633890e4271cfb20c5ffda2d6b3d035afa655ed05ec16c67b18832ed887f2cea83056af079cc75c2ce43c90cce3ed02c2e07d256f240344f1734adeee6dc2b3b4bbf6dcfc68518d0a74e3e66f1865db95ef4204457e6471903c2321ac97f3b8e3d8d935896e9fc9145a30a3e24e7c320490a9944c1e94d301c8388445532699e6189f4aa6a86f67f1d9b8fb0de4225e005bd27594cd33e36622b2cd8eb2781f0c24d33267d9f29309158942b681aab81f39d1b4a73bd17431b46a89a0e4c2c58b1e24e850355c63b72392600d3fff7a16f6ef80ea515709da3ef1d28782882b0dd2f76bf609590db31979c5d1fd03f75d9d8f1c5069&#x27;</span>, <span class="string">&#x27;e&#x27;</span>: <span class="string">&#x27;10001&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line">c=<span class="built_in">int</span>(x[<span class="string">&#x27;c&#x27;</span>],<span class="number">16</span>)</span><br><span class="line">n=<span class="built_in">int</span>(x[<span class="string">&#x27;n&#x27;</span>],<span class="number">16</span>)</span><br><span class="line">e=<span class="built_in">int</span>(x[<span class="string">&#x27;e&#x27;</span>],<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#由共模性质有 c ≡ M^e ≡ 0 modp。所以c=kp，其中k为[1,q)间的正整数。所以p=gcd(c,n)</span></span><br><span class="line">p = gmpy2.gcd(c,n)</span><br><span class="line">q = n//p</span><br><span class="line">phi_n = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line">d = gmpy2.invert(e, phi_n)</span><br><span class="line">M = <span class="built_in">pow</span>(c,d,n)</span><br><span class="line">m3 = M//(<span class="number">2022</span>*<span class="number">1011</span>*p)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m3))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源 </span>
