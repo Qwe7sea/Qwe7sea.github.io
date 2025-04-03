@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LCG基础 | Qwe7sea_Blog</title>
+  <meta name="keywords" content=" Crypto , LCG ">
+  <meta name="description" content="LCG基础 | Qwe7sea_Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="本博客使用Github+Hexo框架搭建  文章：篇；总字数：字； 访问人数：人，访问量：次。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Qwe7sea_Blog">
+<meta property="og:description" content="本博客使用Github+Hexo框架搭建  文章：篇；总字数：字； 访问人数：人，访问量：次。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-23T03:14:54.000Z">
+<meta property="article:modified_time" content="2025-02-06T14:11:31.760Z">
+<meta property="article:author" content="Qwe7sea">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Qwe7sea</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/Qwe7sea/Qwe7sea.github.io"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(16)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="密码学">
+            <i class="fold iconfont icon-right"></i>
+            密码学
+            <small>(15)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;对称加密">
+            
+            对称加密
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;非对称加密">
+            
+            非对称加密
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;流密码">
+            
+            流密码
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;数论">
+            
+            数论
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;CTF比赛">
+            
+            CTF比赛
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;RSA">
+            
+            RSA
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="16">
+<input type="hidden" id="yelog_site_word_count" value="32.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://github.com/Qwe7sea/Qwe7sea.github.io">项目地址</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>大整数分解</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数论</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Coppersmith</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CRT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Crypto</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ECC</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>LCG</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RSA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>XOR</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 密码学 流密码 "
+           href="/2025/04/02/LCG%E5%9F%BA%E7%A1%80/"
+           data-tag="Crypto,LCG"
+           data-author="" >
+            <span class="post-title" title="LCG基础">LCG基础</span>
+            <span class="post-date" title="2025-04-02 10:03:31">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 CTF比赛 "
+           href="/2025/03/25/PolarCTF%E6%98%A5%E5%AD%A3%E8%B5%9B-2025/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="PolarCTF春季赛 2025">PolarCTF春季赛 2025</span>
+            <span class="post-date" title="2025-03-25 09:07:27">2025/03/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/03/10/ECC%E5%AF%86%E7%A0%81/"
+           data-tag="Crypto,ECC"
+           data-author="" >
+            <span class="post-title" title="ECC加密解密">ECC加密解密</span>
+            <span class="post-date" title="2025-03-10 10:55:24">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 对称加密 "
+           href="/2025/03/06/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"
+           data-tag="Crypto,XOR"
+           data-author="" >
+            <span class="post-title" title="对称加密">对称加密</span>
+            <span class="post-date" title="2025-03-06 17:29:40">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 RSA "
+           href="/2025/03/06/%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E6%8E%A8%E5%AF%BC/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="特殊情况推导">特殊情况推导</span>
+            <span class="post-date" title="2025-03-06 10:10:42">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 RSA "
+           href="/2025/03/05/%E5%B7%B2%E7%9F%A5%E9%AB%98%E4%BD%8D%E6%94%BB%E5%87%BB/"
+           data-tag="Crypto,Coppersmith"
+           data-author="" >
+            <span class="post-title" title="已知高位攻击">已知高位攻击</span>
+            <span class="post-date" title="2025-03-05 17:04:08">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 CTF比赛 "
+           href="/2025/02/25/CryptoCTF-2020/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="CryptoCTF 2020">CryptoCTF 2020</span>
+            <span class="post-date" title="2025-02-25 17:30:35">2025/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/02/25/Sagemath%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="sagemath的使用">sagemath的使用</span>
+            <span class="post-date" title="2025-02-25 11:04:12">2025/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/02/13/Crypro-CTF%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="Crypro-CTF常见题型">Crypro-CTF常见题型</span>
+            <span class="post-date" title="2025-02-13 16:44:57">2025/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/13/%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/"
+           data-tag="Crypto,数论"
+           data-author="" >
+            <span class="post-title" title="离散对数">离散对数</span>
+            <span class="post-date" title="2025-02-13 16:23:22">2025/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/10/%E5%90%8C%E4%BD%99%E7%90%86%E8%AE%BA/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="同余理论">同余理论</span>
+            <span class="post-date" title="2025-02-10 11:27:51">2025/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 CTF比赛 "
+           href="/2025/02/08/VNCTF%202025/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="VNCTF 2025">VNCTF 2025</span>
+            <span class="post-date" title="2025-02-08 11:32:32">2025/02/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/05/%E8%BF%9E%E5%88%86%E6%95%B0/"
+           data-tag="Crypto,数论"
+           data-author="" >
+            <span class="post-title" title="连分数">连分数</span>
+            <span class="post-date" title="2025-02-05 11:46:08">2025/02/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/01/24/RSA%E7%9B%B8%E5%85%B3/"
+           data-tag="Crypto,RSA,大整数分解"
+           data-author="" >
+            <span class="post-title" title="RSA加密">RSA加密</span>
+            <span class="post-date" title="2025-01-24 09:56:53">2025/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/01/23/CTF%E7%AB%9E%E8%B5%9B%E5%AF%86%E7%A0%81%E5%AD%A6%E6%8C%87%E5%8D%97/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="CTF竞赛密码学指南">CTF竞赛密码学指南</span>
+            <span class="post-date" title="2025-01-23 11:57:56">2025/01/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/01/22/%E9%83%A8%E7%BD%B2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="部署">部署</span>
+            <span class="post-date" title="2025-01-22 18:26:35">2025/01/22</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-LCG基础" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">LCG基础</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a> > 
+            
+            <a  data-rel="密码学&lt;---&gt;流密码">流密码</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Crypto</a>
+            
+            <a class="color4">LCG</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2025-04-02 10:34:33'>2025-04-02 10:03</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.5k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LCG%E5%9F%BA%E7%A1%80"><span class="toc-text">LCG基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text">计算公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="toc-text">常见题型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B7%B2%E7%9F%A5a-b-m%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%94%B1-X-n-1-%E5%8F%8D%E6%8E%A8-X-n"><span class="toc-text">1. 已知a,b,m，直接由$X_{n+1}$反推$X_n$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-b%E6%9C%AA%E7%9F%A5%EF%BC%8C%E5%85%88%E6%B1%82b%E7%84%B6%E5%90%8E%E5%8F%8D%E6%8E%A8"><span class="toc-text">2. b未知，先求b然后反推</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-a-b%E5%9D%87%E6%9C%AA%E7%9F%A5%EF%BC%8C%E5%85%88%E6%B1%82a%EF%BC%8C%E5%86%8D%E6%B1%82b%EF%BC%8C%E7%84%B6%E5%90%8E%E5%8F%8D%E6%8E%A8"><span class="toc-text">3. a,b均未知，先求a，再求b，然后反推</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-a-b-m%E9%83%BD%E6%9C%AA%E7%9F%A5%EF%BC%8C%E7%BB%99%E5%87%BA%E4%BA%86%E5%A4%9A%E7%BB%84%E8%BE%93%E5%87%BA"><span class="toc-text">4. a,b,m都未知，给出了多组输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BB%99%E5%87%BA%E5%A4%9A%E7%BB%84%E4%BF%A1%E6%81%AF-%E9%80%92%E5%BD%92%E5%85%AC%E5%BC%8F%E8%B0%83%E6%95%B4%E4%B8%BA-X-n-1-a-X-n-b-mod-m"><span class="toc-text">5. 给出多组信息,递归公式调整为$ X_{n+1} &#x3D; a * (X_n - b) mod m $</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%87%BA%E7%9A%84%E4%BF%A1%E6%81%AF%E4%B8%BA%E9%9A%94%E4%BD%8D%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-text">给出的信息为隔位的输出</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="LCG基础"><a href="#LCG基础" class="headerlink" title="LCG基础"></a>LCG基础</h1><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_74345946/article/details/132888135">https://blog.csdn.net/m0_74345946/article/details/132888135</a></p>
+<p>LCG线性同余生成器：<br>$$<br>X_{n+1} &#x3D; (a* X_n + b) mod m<br>$$<br>其中，Xn代表第n个生成的随机数，X0被称为种子值。</p>
+<p>定义整数：</p>
+<ul>
+<li>m是随机序列的模数，必须一个大于0的正整数。一般是一个比较大的素数或者是2的幂，以便提供较长的周期长度。</li>
+<li>a是乘数，必须是一个与m互素的正整数。</li>
+<li>b是增量，也必须是一个与m互素的正整数。</li>
+</ul>
+<h1 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h1><ol>
+<li>由$X_{n+1}$反推$ X_n $ ： $ X_n &#x3D; ((X_{n+1} - b) * a ^{-1}) mod m $</li>
+<li>求a：$ a &#x3D; (X_{n+1} - X_n) * (X_n - X_{n-1}) ^ {-1}) mod m $</li>
+<li>求b：$ b &#x3D; (X_{n+1} - a * X_n) mod m $</li>
+<li>求m：$ t_n &#x3D; X_{n+1} - X_n &#x3D; a * t_{n-1} mod m $，$ t_{n+1}t_{n-1} - t_nt_n &#x3D; 0 mod m $，即$ T_n &#x3D; t_{n+1}t_{n-1} - t_nt_n $是m的倍数，故$T_n$和$ T_{n-1}$的最大公因子数即为m。</li>
+</ol>
+<h1 id="常见题型"><a href="#常见题型" class="headerlink" title="常见题型"></a>常见题型</h1><p>例题：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">flag = <span class="string">b&#x27;NSSCTF&#123;******&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LCG</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, seed, a, b, m</span>):</span><br><span class="line">        <span class="variable language_">self</span>.seed = seed  <span class="comment"># 初始种子</span></span><br><span class="line">        <span class="variable language_">self</span>.a = a  <span class="comment"># 乘数</span></span><br><span class="line">        <span class="variable language_">self</span>.b = b  <span class="comment"># 增量</span></span><br><span class="line">        <span class="variable language_">self</span>.m = m  <span class="comment"># 模数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.seed = (<span class="variable language_">self</span>.a * <span class="variable language_">self</span>.seed + <span class="variable language_">self</span>.b) % <span class="variable language_">self</span>.m</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.seed</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">lcg = LCG(bytes_to_long(flag), getPrime(<span class="number">256</span>), getPrime(<span class="number">256</span>), getPrime(<span class="number">256</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(getPrime(<span class="number">16</span>)):</span><br><span class="line">    lcg.generate()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-已知a-b-m，直接由-X-n-1-反推-X-n"><a href="#1-已知a-b-m，直接由-X-n-1-反推-X-n" class="headerlink" title="1. 已知a,b,m，直接由$X_{n+1}$反推$X_n$"></a>1. 已知a,b,m，直接由$X_{n+1}$反推$X_n$</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line"></span><br><span class="line">a = </span><br><span class="line">b = </span><br><span class="line">m = </span><br><span class="line">c=</span><br><span class="line"></span><br><span class="line"><span class="comment">#c = (a* c0 + b)%m</span></span><br><span class="line">a_1=gmpy2.invert(a,m)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>**<span class="number">16</span>):</span><br><span class="line">    c = (c - b) * a_1 % m</span><br><span class="line">    <span class="comment">#print(c)</span></span><br><span class="line">    flag=libnum.n2s(<span class="built_in">int</span>(c))</span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;NSSCTF&#123;&#x27;</span> <span class="keyword">in</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-b未知，先求b然后反推"><a href="#2-b未知，先求b然后反推" class="headerlink" title="2. b未知，先求b然后反推"></a>2. b未知，先求b然后反推</h2><p>题目：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;a = <span class="subst">&#123;lcg.a&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;m = <span class="subst">&#123;lcg.m&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br></pre></td></tr></table></figure>
+
+<p>exp：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> isPrime</span><br><span class="line"></span><br><span class="line">a = <span class="number">83968440254358975953360088805517488739689448515913931281582194839594954862517</span></span><br><span class="line">m = <span class="number">77161425490597512806099499399561161959645895427463118872087051902811605680317</span></span><br><span class="line">c1=<span class="number">43959768681328408257423567932475057408934775157371406900460140947365416240650</span></span><br><span class="line">c2=<span class="number">8052043336238864355872102889254781281466728072798160448260752595038552944808</span></span><br><span class="line"></span><br><span class="line">b=(c2-a*c1) % m</span><br><span class="line"><span class="comment">#print(b)</span></span><br><span class="line"><span class="comment">#print(gmpy2.gcd(b,m))</span></span><br><span class="line">a_1 = gmpy2.invert(a,m)</span><br><span class="line">c = c1</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>**<span class="number">16</span>):</span><br><span class="line">    c = (c-b) * a_1 % m</span><br><span class="line">    flag = libnum.n2s(<span class="built_in">int</span>(c))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;NSSCTF&#x27;</span> <span class="keyword">in</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-a-b均未知，先求a，再求b，然后反推"><a href="#3-a-b均未知，先求a，再求b，然后反推" class="headerlink" title="3. a,b均未知，先求a，再求b，然后反推"></a>3. a,b均未知，先求a，再求b，然后反推</h2><p>题目：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;m = <span class="subst">&#123;lcg.m&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br></pre></td></tr></table></figure>
+
+<p>exp：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line"></span><br><span class="line">m = <span class="number">96343920769213509183566159649645883498232615147408833719260458991750774595569</span></span><br><span class="line">c1 = <span class="number">10252710164251491500439276567353270040858009893278574805365710282130751735178</span></span><br><span class="line">c2 = <span class="number">45921408119394697679791444870712342819994277665465694974769614615154688489325</span></span><br><span class="line">c3 = <span class="number">27580830484789044454303424960338587428190874764114011948712258959481449527087</span></span><br><span class="line"></span><br><span class="line">a = (c3-c2) * gmpy2.invert(c2-c1,m) % m</span><br><span class="line"><span class="comment"># print(gmpy2.gcd(a,m))</span></span><br><span class="line">a_1 = gmpy2.invert(a,m)</span><br><span class="line">b = (c2-a*c1) % m</span><br><span class="line"><span class="comment"># print(gmpy2.gcd(b,m))</span></span><br><span class="line">c = c1</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>**<span class="number">16</span>):</span><br><span class="line">    c = (c-b) * a_1 % m</span><br><span class="line">    flag = libnum.n2s(<span class="built_in">int</span>(c))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;NSSCTF&#123;&#x27;</span> <span class="keyword">in</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-a-b-m都未知，给出了多组输出"><a href="#4-a-b-m都未知，给出了多组输出" class="headerlink" title="4. a,b,m都未知，给出了多组输出"></a>4. a,b,m都未知，给出了多组输出</h2><p>题目：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br></pre></td></tr></table></figure>
+
+<p>exp：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> GCD, isPrime, long_to_bytes</span><br><span class="line"></span><br><span class="line">c=[<span class="number">47513456973995038401745402734715062697203139056061145149400619356555247755807</span>,</span><br><span class="line"><span class="number">57250853157569177664354712595458385047274531304709190064872568447414717938749</span>,</span><br><span class="line"><span class="number">30083421760501477670128918578491346192479634327952674530130693136467154794135</span>,</span><br><span class="line"><span class="number">38739029019071698539301566649413274114468266283936163804522278316663267625091</span>,</span><br><span class="line"><span class="number">42506270962409723585330663340839465445484970240895653869393419413017237427900</span>]</span><br><span class="line"></span><br><span class="line">t=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(c)):</span><br><span class="line">    t.append(c[i]-c[i-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#先求出m</span></span><br><span class="line">m = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(t)-<span class="number">1</span>):</span><br><span class="line">    m = GCD(t[i+<span class="number">1</span>]*t[i-<span class="number">1</span>]-t[i]**<span class="number">2</span>, m)</span><br><span class="line"><span class="comment"># print(isPrime(m))       False</span></span><br><span class="line">m//=<span class="number">2</span></span><br><span class="line"><span class="comment"># print(isPrime(m))</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#再计算a,b</span></span><br><span class="line">a = (c[<span class="number">3</span>]-c[<span class="number">2</span>])*gmpy2.invert(c[<span class="number">2</span>]-c[<span class="number">1</span>],m) % m</span><br><span class="line">b = (c[<span class="number">2</span>]-a*c[<span class="number">1</span>]) % m</span><br><span class="line"><span class="comment"># print(gmpy2.gcd(a,m))</span></span><br><span class="line"><span class="comment"># print(gmpy2.gcd(b,m))</span></span><br><span class="line">a_1=gmpy2.invert(a,m)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>**<span class="number">16</span>):</span><br><span class="line">    c[<span class="number">1</span>] = (c[<span class="number">1</span>]-b) * a_1 % m</span><br><span class="line">    flag = long_to_bytes(c[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;NSSCTF&#123;&#x27;</span> <span class="keyword">in</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>m&#x2F;&#x2F;2计算的原因是：我们虽然得到了m的倍数，通过求解 GCD 也确实能得到 m。但是在数据不够多的情况下，我们可能得到的是 km (不信的话，你可以输出一下 isPrime(m) 发现 m 确实不是素数) ,这时就需要我们遍历一些小数，手动去除 k 。</p>
+<h2 id="5-给出多组信息-递归公式调整为-X-n-1-a-X-n-b-mod-m"><a href="#5-给出多组信息-递归公式调整为-X-n-1-a-X-n-b-mod-m" class="headerlink" title="5. 给出多组信息,递归公式调整为$ X_{n+1} &#x3D; a * (X_n - b) mod m $"></a>5. 给出多组信息,递归公式调整为$ X_{n+1} &#x3D; a * (X_n - b) mod m $</h2><p>题目调整了递归公式：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">flag = <span class="string">b&#x27;NSSCTF&#123;******&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LCG</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, seed, a, b, m</span>):</span><br><span class="line">        <span class="variable language_">self</span>.seed = seed  <span class="comment"># 初始种子</span></span><br><span class="line">        <span class="variable language_">self</span>.a = a  <span class="comment"># 乘数</span></span><br><span class="line">        <span class="variable language_">self</span>.b = b  <span class="comment"># 增量</span></span><br><span class="line">        <span class="variable language_">self</span>.m = m  <span class="comment"># 模数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.seed = <span class="variable language_">self</span>.a * (<span class="variable language_">self</span>.seed - <span class="variable language_">self</span>.b) % <span class="variable language_">self</span>.m</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.seed</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">lcg = LCG(bytes_to_long(flag), getPrime(<span class="number">256</span>), getPrime(<span class="number">256</span>), getPrime(<span class="number">256</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(getPrime(<span class="number">16</span>)):</span><br><span class="line">    lcg.generate()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br></pre></td></tr></table></figure>
+
+<p>这里的LCG递归公式是：self.seed &#x3D; self.a * (self.seed - self.b) % self.m</p>
+<p>只需要把 -ab 看成一个整体，这样我们就可以转化为标准式 ax+b 的形式。因为这里我们只需要恢复初始种子 m，所以代码和第4种题型没什么区别。</p>
+<p>exp：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> GCD, isPrime, long_to_bytes</span><br><span class="line"></span><br><span class="line">c=[<span class="number">57648351648792284446777383544515312078150027665462203747924668509833442797796</span>,</span><br><span class="line">   <span class="number">90378879763416486117626477831653213918315023665514305359005153448529276829825</span>,</span><br><span class="line">   <span class="number">21826576702665114807208181233864324586557058567478767825970403161758214940301</span>,</span><br><span class="line">   <span class="number">47594460970742467761038407996122637655856234121180714918606854365482948918701</span>,</span><br><span class="line">   <span class="number">11871076497267630136796123094001159466754095580273018347962555675375123133730</span>]</span><br><span class="line"></span><br><span class="line">t=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(c)):</span><br><span class="line">    t.append(c[i]-c[i-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">m = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(t)-<span class="number">1</span>):</span><br><span class="line">    m = GCD(t[i+<span class="number">1</span>]*t[i-<span class="number">1</span>]-t[i]**<span class="number">2</span>, m)</span><br><span class="line"><span class="built_in">print</span>(isPrime(m))   <span class="comment"># False m的倍数</span></span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">100</span>):</span><br><span class="line">    <span class="keyword">if</span> isPrime(m//i):</span><br><span class="line">        <span class="built_in">print</span>(i)   <span class="comment"># i是4</span></span><br><span class="line">        m//=i</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">a = (c[<span class="number">3</span>]-c[<span class="number">2</span>])*gmpy2.invert(c[<span class="number">2</span>]-c[<span class="number">1</span>],m) % m</span><br><span class="line">b = (c[<span class="number">2</span>]-a*c[<span class="number">1</span>]) % m</span><br><span class="line"><span class="comment"># print(gmpy2.gcd(a,m))</span></span><br><span class="line"><span class="comment"># print(gmpy2.gcd(b,m))</span></span><br><span class="line">a_1=gmpy2.invert(a,m)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>**<span class="number">16</span>):</span><br><span class="line">    c[<span class="number">1</span>] = (c[<span class="number">1</span>]-b) * a_1 % m</span><br><span class="line">    flag = long_to_bytes(c[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;NSSCTF&#123;&#x27;</span> <span class="keyword">in</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="给出的信息为隔位的输出"><a href="#给出的信息为隔位的输出" class="headerlink" title="给出的信息为隔位的输出"></a>给出的信息为隔位的输出</h2><p>题目：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">flag = <span class="string">b&#x27;NSSCTF&#123;******&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LCG</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, seed, a, b, m</span>):</span><br><span class="line">        <span class="variable language_">self</span>.seed = seed  <span class="comment"># 初始种子</span></span><br><span class="line">        <span class="variable language_">self</span>.a = a  <span class="comment"># 乘数</span></span><br><span class="line">        <span class="variable language_">self</span>.b = b  <span class="comment"># 增量</span></span><br><span class="line">        <span class="variable language_">self</span>.m = m  <span class="comment"># 模数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.seed = (<span class="variable language_">self</span>.a * <span class="variable language_">self</span>.seed + <span class="variable language_">self</span>.b) % <span class="variable language_">self</span>.m</span><br><span class="line">        <span class="variable language_">self</span>.seed = (<span class="variable language_">self</span>.a * <span class="variable language_">self</span>.seed + <span class="variable language_">self</span>.b) % <span class="variable language_">self</span>.m</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.seed</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">lcg = LCG(bytes_to_long(flag), getPrime(<span class="number">255</span>), getPrime(<span class="number">255</span>), getPrime(<span class="number">256</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(getPrime(<span class="number">16</span>)):</span><br><span class="line">    lcg.generate()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br><span class="line"><span class="built_in">print</span>(lcg.generate())</span><br></pre></td></tr></table></figure>
+
+<p>LCG进行了两次加密，我们得到的并不是连续的输出，而是隔位输出，比如是 X2,X4,X6,X8,X10</p>
+<p>exp:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> GCD, isPrime, long_to_bytes</span><br><span class="line"></span><br><span class="line">c = [<span class="number">25445927935559969212648839062255651208014967526951331344342413906051118248013</span>,</span><br><span class="line"><span class="number">81572970970116732975667604095930675262596098540738447440566868976253289440293</span>,</span><br><span class="line"><span class="number">6956793925625110803779114150160476498676179542815207353218944386232051429289</span>,</span><br><span class="line"><span class="number">88042506866508011592456777776490262927213783361334741921985316105965255450508</span>,</span><br><span class="line"><span class="number">5652832125321707726481846809536180176877263519327268361130605456255558285092</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.求m</span></span><br><span class="line"><span class="comment">#(X4 - X2) = a(X3 - X1) mod m</span></span><br><span class="line"><span class="comment">#依然可以构造消去增量 b 构造等比数列，所以我们依然可以用之前的方法求 m 。</span></span><br><span class="line">t=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(c)):</span><br><span class="line">    t.append(c[i]-c[i-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">m = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(t)-<span class="number">1</span>):</span><br><span class="line">    m = GCD(t[i+<span class="number">1</span>]*t[i-<span class="number">1</span>]-t[i]**<span class="number">2</span>, m)</span><br><span class="line"><span class="comment"># print(isPrime(m))   # true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2.求a</span></span><br><span class="line"><span class="comment">#(X4 - X2) = a^2(X2 - X0) mod m</span></span><br><span class="line"><span class="comment">#由于输出是间隔的：Xn+1 = (a* (a*Xn-1 +b) +b) mod m,把 a^2 看作 a,把 (a+1)b 看成 b，这样就相当于重新构造了一个LCG。</span></span><br><span class="line">a = (c[<span class="number">3</span>]-c[<span class="number">2</span>])*gmpy2.invert(c[<span class="number">2</span>]-c[<span class="number">1</span>],m) % m</span><br><span class="line">b = (c[<span class="number">2</span>]-a*c[<span class="number">1</span>]) % m             <span class="comment"># 把(a+1)*b当成b就可以了</span></span><br><span class="line"><span class="comment"># print(gmpy2.gcd(a,m))</span></span><br><span class="line"><span class="comment"># print(gmpy2.gcd(b,m))</span></span><br><span class="line">a_1=gmpy2.invert(a,m)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>**<span class="number">16</span>):</span><br><span class="line">    c[<span class="number">1</span>] = (c[<span class="number">1</span>]-b) * a_1 % m</span><br><span class="line">    flag = long_to_bytes(c[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;NSSCTF&#123;&#x27;</span> <span class="keyword">in</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
