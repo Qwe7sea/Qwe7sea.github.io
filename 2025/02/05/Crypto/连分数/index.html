@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>连分数 | Qwe7sea_Blog</title>
+  <meta name="keywords" content=" Crypto , 数论 ">
+  <meta name="description" content="连分数 | Qwe7sea_Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="PHP相关及绕过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP相关及绕过">
+<meta property="og:url" content="http://example.com/2025/05/09/Web/PHP%E7%9B%B8%E5%85%B3%E5%8F%8A%E7%BB%95%E8%BF%87/index.html">
+<meta property="og:site_name" content="Qwe7sea_Blog">
+<meta property="og:description" content="PHP相关及绕过">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-09T02:42:56.659Z">
+<meta property="article:modified_time" content="2025-05-09T02:42:57.168Z">
+<meta property="article:author" content="Qwe7sea">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Qwe7sea</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/Qwe7sea/Qwe7sea.github.io"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(18)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="Web">
+            <i class="fold iconfont icon-right"></i>
+            Web
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="Web&lt;---&gt;php">
+            
+            php
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="密码学">
+            <i class="fold iconfont icon-right"></i>
+            密码学
+            <small>(13)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;对称加密">
+            
+            对称加密
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;非对称加密">
+            
+            非对称加密
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;流密码">
+            
+            流密码
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;数论">
+            
+            数论
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;RSA">
+            
+            RSA
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF比赛">
+            
+            CTF比赛
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="18">
+<input type="hidden" id="yelog_site_word_count" value="33.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://github.com/Qwe7sea/Qwe7sea.github.io">项目地址</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>大整数分解</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>离散对数</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数论</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Coppersmith</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CRT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Crypto</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ECC</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>LCG</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>php</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RSA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>XOR</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 Web php "
+           href="/2025/05/09/Web/PHP%E7%9B%B8%E5%85%B3%E5%8F%8A%E7%BB%95%E8%BF%87/"
+           data-tag="php"
+           data-author="" >
+            <span class="post-title" title="PHP相关及绕过">PHP相关及绕过</span>
+            <span class="post-date" title="2025-05-09 10:42:56">2025/05/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/05/06/Crypto/%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0%E9%97%AE%E9%A2%98/"
+           data-tag="Crypto,离散对数"
+           data-author="" >
+            <span class="post-title" title="离散对数问题">离散对数问题</span>
+            <span class="post-date" title="2025-05-06 15:06:45">2025/05/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 流密码 "
+           href="/2025/04/02/Crypto/LCG%E5%9F%BA%E7%A1%80/"
+           data-tag="Crypto,LCG"
+           data-author="" >
+            <span class="post-title" title="LCG基础">LCG基础</span>
+            <span class="post-date" title="2025-04-02 10:03:31">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 CTF比赛 "
+           href="/2025/03/25/Crypto/PolarCTF%E6%98%A5%E5%AD%A3%E8%B5%9B-2025/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="PolarCTF春季赛 2025">PolarCTF春季赛 2025</span>
+            <span class="post-date" title="2025-03-25 09:07:27">2025/03/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/03/10/Crypto/ECC%E5%AF%86%E7%A0%81/"
+           data-tag="Crypto,ECC"
+           data-author="" >
+            <span class="post-title" title="ECC加密解密">ECC加密解密</span>
+            <span class="post-date" title="2025-03-10 10:55:24">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 对称加密 "
+           href="/2025/03/06/Crypto/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"
+           data-tag="Crypto,XOR"
+           data-author="" >
+            <span class="post-title" title="对称加密">对称加密</span>
+            <span class="post-date" title="2025-03-06 17:29:40">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 RSA "
+           href="/2025/03/06/Crypto/%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E6%8E%A8%E5%AF%BC/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="特殊情况推导">特殊情况推导</span>
+            <span class="post-date" title="2025-03-06 10:10:42">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 RSA "
+           href="/2025/03/05/Crypto/%E5%B7%B2%E7%9F%A5%E9%AB%98%E4%BD%8D%E6%94%BB%E5%87%BB/"
+           data-tag="Crypto,Coppersmith"
+           data-author="" >
+            <span class="post-title" title="已知高位攻击">已知高位攻击</span>
+            <span class="post-date" title="2025-03-05 17:04:08">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 CTF比赛 "
+           href="/2025/02/25/Crypto/CryptoCTF-2020/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="CryptoCTF 2020">CryptoCTF 2020</span>
+            <span class="post-date" title="2025-02-25 17:30:35">2025/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/02/25/Crypto/Sagemath%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="sagemath的使用">sagemath的使用</span>
+            <span class="post-date" title="2025-02-25 11:04:12">2025/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/02/13/Crypto/Crypro-CTF%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="Crypro-CTF常见题型">Crypro-CTF常见题型</span>
+            <span class="post-date" title="2025-02-13 16:44:57">2025/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/13/Crypto/%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/"
+           data-tag="Crypto,数论"
+           data-author="" >
+            <span class="post-title" title="离散对数">离散对数</span>
+            <span class="post-date" title="2025-02-13 16:23:22">2025/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/10/Crypto/%E5%90%8C%E4%BD%99%E7%90%86%E8%AE%BA/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="同余理论">同余理论</span>
+            <span class="post-date" title="2025-02-10 11:27:51">2025/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 CTF比赛 "
+           href="/2025/02/08/Crypto/VNCTF%202025/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="VNCTF 2025">VNCTF 2025</span>
+            <span class="post-date" title="2025-02-08 11:32:32">2025/02/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/05/Crypto/%E8%BF%9E%E5%88%86%E6%95%B0/"
+           data-tag="Crypto,数论"
+           data-author="" >
+            <span class="post-title" title="连分数">连分数</span>
+            <span class="post-date" title="2025-02-05 11:46:08">2025/02/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/01/24/Crypto/RSA%E7%9B%B8%E5%85%B3/"
+           data-tag="Crypto,RSA,大整数分解"
+           data-author="" >
+            <span class="post-title" title="RSA加密">RSA加密</span>
+            <span class="post-date" title="2025-01-24 09:56:53">2025/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/01/23/Crypto/CTF%E7%AB%9E%E8%B5%9B%E5%AF%86%E7%A0%81%E5%AD%A6%E6%8C%87%E5%8D%97/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="CTF竞赛密码学指南">CTF竞赛密码学指南</span>
+            <span class="post-date" title="2025-01-23 11:57:56">2025/01/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/01/22/%E9%83%A8%E7%BD%B2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="部署">部署</span>
+            <span class="post-date" title="2025-01-22 18:26:35">2025/01/22</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Crypto/连分数" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">连分数</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a> > 
+            
+            <a  data-rel="密码学&lt;---&gt;数论">数论</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Crypto</a>
+            
+            <a class="color3">数论</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2025-03-10 10:27:06'>2025-02-05 11:46</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.6k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E5%88%86%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">连分数基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95%E8%BF%9E%E5%88%86%E6%95%B0-Simple-Continued-Fraction"><span class="toc-text">1. 简单连分数(Simple Continued Fraction)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9C%89%E9%99%90%E8%BF%9E%E5%88%86%E6%95%B0"><span class="toc-text">2.有限连分数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E5%88%86%E6%95%B0%E8%BF%98%E5%8E%9F%E6%88%90%E5%88%86%E6%95%B0"><span class="toc-text">连分数还原成分数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E8%BF%9E%E5%88%86%E6%95%B0%E8%A1%A8%E7%A4%BA%E5%80%92%E6%95%B0"><span class="toc-text">有限连分数表示倒数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B8%90%E8%BF%9B%E5%88%86%E6%95%B0-convergent"><span class="toc-text">3.渐进分数(convergent)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%8C%E5%85%A8%E5%95%86"><span class="toc-text">4.完全商</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E5%95%86%E4%B8%8E%E5%85%B6%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">完全商与其整数部分的关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%94%AF%E4%B8%80%E6%80%A7%E8%A1%A8%E8%BE%BE"><span class="toc-text">5. 唯一性表达</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E5%88%86%E6%95%B0%E7%90%86%E8%AE%BA"><span class="toc-text">连分数理论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E5%88%86%E6%95%B0%E9%80%BC%E8%BF%91"><span class="toc-text">连分数逼近</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8B%92%E8%AE%A9%E5%BE%B7%E5%AE%9A%E7%90%86"><span class="toc-text">勒让德定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-%E6%B9%96%E6%B9%98%E6%9D%AF-2021-signin"><span class="toc-text">例题  [湖湘杯 2021]signin</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-text">分析</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="连分数基本概念"><a href="#连分数基本概念" class="headerlink" title="连分数基本概念"></a>连分数基本概念</h1><h2 id="1-简单连分数-Simple-Continued-Fraction"><a href="#1-简单连分数-Simple-Continued-Fraction" class="headerlink" title="1. 简单连分数(Simple Continued Fraction)"></a>1. 简单连分数(Simple Continued Fraction)</h2><p>$$<br>a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{…}}}}<br>$$</p>
+<p>$a_0$可以是任意整数，$a_i$是正整数$(i&gt;0)$：部分商（partial quotient）</p>
+<p>可简写为$[a_0,a_1,a_2,a_3,…]$</p>
+<p>例如：</p>
+<p>$$<br>\begin{align*}<br>\frac{43}{19} &amp;&#x3D; 2+\frac{1}{3+\frac{1}{1+\frac{1}{4}}}	\<br>&amp;&#x3D; [2,3,1,4]<br>\end{align*}<br>$$</p>
+<h2 id="2-有限连分数"><a href="#2-有限连分数" class="headerlink" title="2.有限连分数"></a>2.有限连分数</h2><p>简单连分数可以分为有限连分数和无线连分数。</p>
+<p><strong>定理：任何有理数都可以表示成有限连分数；任何有限连分数都是一个有理数。</strong><br>$$<br>Q &#x3D; {\frac{a}{b}|a,b \in Z,b \neq 0}<br>$$</p>
+<p>$$<br>\frac{a}{b}	\xrightarrow{\text{欧几里得算法}}	[a_0,a_1,…,a_n]<br>$$</p>
+<h3 id="连分数还原成分数"><a href="#连分数还原成分数" class="headerlink" title="连分数还原成分数"></a>连分数还原成分数</h3><p>$[a_0,a_1,…,a_n] &#x3D; [a_0,…,a_m,[a_{m+1},…,a_n]]$连分数叠罗汉的形式。<br>$$<br>\begin{align*}<br>[a_0,a_1,…,a_n] &amp;&#x3D; a_0+\frac{1}{a_1+\frac{1}{…+\frac{1}{a_n}}} \<br>&amp;&#x3D; \frac{a_0(a_1+\frac{1}{…+\frac{1}{a_n}})+1}{a_1+\frac{1}{…+\frac{1}{a_n}}}	\<br>&amp;&#x3D; \frac{a_0[a_1,…,a_n]+1}{[a_1,…,a_n]}	\<br>&amp;&#x3D; \frac{a}{b}<br>\end{align*}<br>$$</p>
+<h3 id="有限连分数表示倒数"><a href="#有限连分数表示倒数" class="headerlink" title="有限连分数表示倒数"></a>有限连分数表示倒数</h3><p>例：$\frac{43}{19}$ 	$\xrightarrow{\text{倒数}}$	$\frac{19}{43}$</p>
+<p>$$<br>\begin{align*}<br>\frac{19}{43} &amp;&#x3D; \frac{1}{\frac{43}{19}}\<br>&amp;&#x3D;\frac{1}{[2,3,1,4]}\<br>&amp;&#x3D;0+\frac{1}{[2,3,1,4]}\<br>&amp;&#x3D;[0,2,3,1,4]<br>\end{align*}<br>$$<br>所以$[2,3,1,4]$的倒数是$[0,2,3,1,4]$</p>
+<p><strong>给定有限连分数$[a_0,a_1,…,a_n]$,求倒数</strong></p>
+<ul>
+<li>如果$a_0 &#x3D; 0$，就把0去掉：$[a_1,…,a_n]$</li>
+<li>如果$a_0 \neq 0$，就在前面补上0：$[0,a_0,a_1,…,a_n]$</li>
+</ul>
+<h2 id="3-渐进分数-convergent"><a href="#3-渐进分数-convergent" class="headerlink" title="3.渐进分数(convergent)"></a>3.渐进分数(convergent)</h2><p>定义：称$[a_0,…,a_m](0\leq m\leq n)$为$[a_0,a_1,…,a_n]$的第m个渐进分数。</p>
+<p>偶数编号的渐进分数位于左边，呈递增趋势逐渐靠近原来的分数；而奇数编号的则位于右边，呈递减趋势。<br>用p和q分别表示每个渐进分数的分子和分母<br>$[a_0]&#x3D;\frac{p_0}{q_0}$<br>$[a_0,a_1]&#x3D;\frac{p_1}{q_1}$<br>$..$<br>$[a_0,a_1,…,a_n]&#x3D;\frac{p_n}{q_n}$<br>$\frac{p_0}{q_0} \lt \frac{p_2}{q_2}\lt …\lt\frac{p_n}{q_n}\lt…\lt \frac{p_3}{q_3}\lt \frac{p_1}{q_1}$</p>
+<p>对于渐进分数与连分数之间的联系：<br>$[a_0]&#x3D;a_0&#x3D;\frac{a_0}{1}&#x3D;\frac{p_0}{q_0}$<br>$[a_0,a_1]&#x3D;a_0+\frac{1}{a_1}&#x3D;\frac{a_0a_1+1}{a_1}&#x3D;\frac{p_1}{q_1}$<br>所以迭代关系：<br>$p_n&#x3D;a_np_{n-1}+p_{n-2},	q_n&#x3D;a_nq_{n-1}+q_{n-2} (n \geq 2)$</p>
+<p><strong>定理：$p_n$，$q_n$满足关系式：$p_nq_{n-1} - p_{n-1}q_n &#x3D; (-1)^{n-1}$</strong><br>两个相邻渐进分数的分子分母交叉相乘求差值的结果和下标n有关。</p>
+<h2 id="4-完全商"><a href="#4-完全商" class="headerlink" title="4.完全商"></a>4.完全商</h2><p>渐进分数是从连分数的第一个元素开始 分离出来的一段形成的连分数；反过来，从连分数的最后一个元素开始反向操作分离出来一段形成单独的连分数 就叫原来连分数的完全商。</p>
+<p>例：$\frac{43}{19}&#x3D;[2,3,1,4]$</p>
+<p>渐进分数：$[2],[2,3],[2,3,1],[2,3,1,4]$</p>
+<p>完全商：$[2,3,1,4]$第0个完全商,$[3,1,4]$第1个完全商,$[1,4]$第2个完全商，$[4]$第3个完全商</p>
+<p><strong>完全商(complete quotient)定义：称$[a_t,…,a_n] (0 \leq t \leq n)$为$[a_0,a_1,…,a_n]$的第t个完全商。</strong></p>
+<h3 id="完全商与其整数部分的关系"><a href="#完全商与其整数部分的关系" class="headerlink" title="完全商与其整数部分的关系"></a>完全商与其整数部分的关系</h3><p>定理：给定有限连分数$[a_0,a_1,…,a_n]$，有</p>
+<ul>
+<li>如果$a_n &#x3D; 1$，则$[a_{n-1},a_n]$的整数部分是$a_{n-1}+1$ </li>
+<li>否则$[a_t,…,a_n] (0 \leq t \leq n)$的整数部分是$a_t$</li>
+</ul>
+<h2 id="5-唯一性表达"><a href="#5-唯一性表达" class="headerlink" title="5. 唯一性表达"></a>5. 唯一性表达</h2><hr>
+<h1 id="连分数理论"><a href="#连分数理论" class="headerlink" title="连分数理论"></a>连分数理论</h1><p>连分数理论（了解连分数、无穷级数等基本概念，熟悉最佳有理数逼近、循环连分数展开、佩尔方程求解等运算过程）</p>
+<h1 id="连分数逼近"><a href="#连分数逼近" class="headerlink" title="连分数逼近"></a>连分数逼近</h1><h2 id="勒让德定理"><a href="#勒让德定理" class="headerlink" title="勒让德定理"></a>勒让德定理</h2><p>关于连分数逼近问题离不开的就是勒让德定理：</p>
+<p>假设x∈R+,那么在x的连分数逼近展开中，如果有$$ ∣x−\frac{b}{c}∣&lt; \frac{1}{2c^2} $$，其中gcd(b,c)&#x3D;&#x3D;1,那么可以认为$$ \frac{b}{c} $$是x的连分数展开中其中一项的值。</p>
+<h2 id="例题-湖湘杯-2021-signin"><a href="#例题-湖湘杯-2021-signin" class="headerlink" title="例题  [湖湘杯 2021]signin"></a>例题  [湖湘杯 2021]signin</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> secret <span class="keyword">import</span> flag</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">m1 = bytes_to_long(flag[:<span class="built_in">len</span>(flag) // <span class="number">2</span>])</span><br><span class="line">m2 = bytes_to_long(flag[<span class="built_in">len</span>(flag) // <span class="number">2</span>:])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gen</span>(<span class="params">pbits, qbits</span>):</span><br><span class="line">    p1, q1 = getPrime(pbits), getPrime(qbits)</span><br><span class="line">    n1 = p1**<span class="number">4</span>*q1</span><br><span class="line">    q2 = getPrime(qbits)</span><br><span class="line">    bound = p1 // (<span class="number">8</span>*q1*q2) + <span class="number">1</span></span><br><span class="line">    p2 = random.randrange(p1, p1 + bound)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> isPrime(p2):</span><br><span class="line">        p2 = random.randrange(p1, p1 + bound)</span><br><span class="line">    n2 = p2**<span class="number">4</span>*q2</span><br><span class="line">    <span class="keyword">return</span> (n1, n2), (p1, q1), (p2, q2)</span><br><span class="line"></span><br><span class="line">e = <span class="number">0x10001</span></span><br><span class="line">pbits = <span class="built_in">int</span>(<span class="number">360</span>)</span><br><span class="line">qbits = <span class="built_in">int</span>(<span class="number">128</span>)</span><br><span class="line">pk, sk1, sk2 = gen(pbits, qbits)</span><br><span class="line">c1 = <span class="built_in">pow</span>(m1, e, pk[<span class="number">0</span>])</span><br><span class="line">c2 = <span class="built_in">pow</span>(m2, e, pk[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;pk = <span class="subst">&#123;pk&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c1, c2 = <span class="subst">&#123;c1, c2&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">pk = (1150398070565459492080597718626032792435556703413923483458704675295997646493249759818468321328556510074044954676615760446708253531839417036997811506222349194302791943489195718713797322878586379546657275419261647635859989280700191441312691274285176619391539387875252135478424580680264554294179123254566796890998243909286508189826458854346825493157697201495100628216832191035903848391447704849808577310612723700318670466035077202673373956324725108350230357879374234418393233, 1242678737076048096780023147702514112272319497423818488193557934695583793070332178723043194823444815153743889740338870676093799728875725651036060313223096288606947708155579060628807516053981975820338028456770109640111153719903207363617099371353910243497871090334898522942934052035102902892149792570965804205461900841595290667647854346905445201396273291648968142608158533514391348407631818144116768794595226974831093526512117505486679153727123796834305088741279455621586989)</span></span><br><span class="line"><span class="string">c1, c2 = (361624030197288323178211941746074961985876772079713896964822566468795093475887773853629454653096485450671233584616088768705417987527877166166213574572987732852155320225332020636386698169212072312758052524652761304795529199864805108000796457423822443871436659548626629448170698048984709740274043050729249408577243328282313593461300703078854044587993248807613713896590402657788194264718603549894361488507629356532718775278399264279359256975688280723740017979438505001819438, 33322989148902718763644384246610630825314206644879155585369541624158380990667828419255828083639294898100922608833810585530801931417726134558845725168047585271855248605561256531342703212030641555260907310067120102069499927711242804407691706542428236208695153618955781372741765233319988193384708525251620506966304554054884590718068210659709406626033891748214407992041364462525367373648910810036622684929049996166651416565651803952838857960054689875755131784246099270581394)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>因为p2 &gt; p1, 则 n1&#x2F;n2 &#x3D; (p1&#x2F;p2)^4 * (q1&#x2F;q2) ＜ q1&#x2F;q2，且q1&#x2F;q2 ∈ (n1&#x2F;n2,1)。对 n1&#x2F;n2 进行连分数展开并求其各项渐进分数，进而求解 q1、q2。</p>
+<p>解法一：调用wiener.ContinuedFraction方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> xenny.ctf.crypto.modern.asymmetric.rsa <span class="keyword">import</span> wiener</span><br><span class="line"></span><br><span class="line">cfs = wiener.ContinuedFraction(n1, n2).fractionlist	<span class="comment">#得到(q1, q2)的列表</span></span><br><span class="line"><span class="keyword">for</span> q1, q2 <span class="keyword">in</span> cfs:</span><br><span class="line">    <span class="keyword">if</span> q1 == <span class="number">0</span> <span class="keyword">or</span> q2 == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">if</span> pk[<span class="number">0</span>] % q1 == <span class="number">0</span> <span class="keyword">and</span> pk[<span class="number">1</span>] % q2 == <span class="number">0</span> <span class="keyword">and</span> is_prime(q1) <span class="keyword">and</span> is_prime(q2) <span class="keyword">and</span> gmpy2.iroot(pk[<span class="number">0</span>] // q1, <span class="number">4</span>)[<span class="number">1</span>]:</span><br><span class="line">        p1 = iroot(pk[<span class="number">0</span>] // q1, <span class="number">4</span>)[<span class="number">0</span>]</span><br><span class="line">        p2 = iroot(pk[<span class="number">1</span>] // q2, <span class="number">4</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>解法二：写continuedFra连分数逼近</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">continuedFra</span>(<span class="params">x,y</span>):</span><br><span class="line">    cf = []</span><br><span class="line">    <span class="keyword">while</span> y != <span class="number">0</span>:</span><br><span class="line">        cf.append(x // y)</span><br><span class="line">        x,y = y,x % y</span><br><span class="line">    <span class="keyword">return</span> cf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">exp</span>(<span class="params">x,y</span>):</span><br><span class="line">    cf = continuedFra(x,y)</span><br><span class="line">    fz = [cf[<span class="number">0</span>],cf[<span class="number">0</span>] * cf[<span class="number">1</span>] + <span class="number">1</span>]</span><br><span class="line">    fm = [<span class="number">1</span>,cf[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="built_in">len</span>(cf)):</span><br><span class="line">        z = fz[i - <span class="number">1</span>] * cf[i] + fz[i - <span class="number">2</span>]</span><br><span class="line">        m = fm[i - <span class="number">1</span>] * cf[i] + fm[i - <span class="number">2</span>]</span><br><span class="line">        fz.append(z)</span><br><span class="line">        fm.append(m)</span><br><span class="line">    <span class="keyword">return</span> fz,fm</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get</span>(<span class="params">x,y</span>):</span><br><span class="line">    tmp1,tmp2 = exp(x,y)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="built_in">len</span>(tmp1)):</span><br><span class="line">        _x,_y = tmp1[i],tmp2[i]</span><br><span class="line">        <span class="keyword">if</span> x % _x == <span class="number">0</span> <span class="keyword">and</span> y % _y == <span class="number">0</span> <span class="keyword">and</span> x != _x <span class="keyword">and</span> y != _y:</span><br><span class="line">            <span class="keyword">return</span> _x,_y</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    n1 = </span><br><span class="line">    n2 =</span><br><span class="line"></span><br><span class="line">    q1,q2 = get(n1,n2)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;q1=&#x27;</span>,q1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;q2=&#x27;</span>,q2)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>解法三：在wiener中调用continued_fraction方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sage</span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> iroot</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">wiener</span>(<span class="params">n1:<span class="built_in">int</span>, n2:<span class="built_in">int</span></span>):</span><br><span class="line">    n1 = Integer(n1)</span><br><span class="line">    n2 = Integer(n2)</span><br><span class="line">    cf = (n1 / n2).continued_fraction().convergents()</span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> cf:</span><br><span class="line">        q1 = f.numer()</span><br><span class="line">        q2 = f.denom()</span><br><span class="line">        <span class="keyword">if</span> q1 == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> n1 % q1 == <span class="number">0</span> <span class="keyword">and</span> q1 &gt; <span class="number">1</span> <span class="keyword">and</span> q1 &lt; n1:</span><br><span class="line">            <span class="keyword">return</span> q1, q2</span><br><span class="line"></span><br><span class="line">pk = </span><br><span class="line">c1, c2 = </span><br><span class="line"> </span><br><span class="line">n1 = pk[<span class="number">0</span>]</span><br><span class="line">n2 = pk[<span class="number">1</span>]</span><br><span class="line">q1, q2 = wiener(n1, n2)</span><br><span class="line">p1 = iroot(n1//q1, <span class="number">4</span>)</span><br><span class="line">p2 = iroot(n2//q2, <span class="number">4</span>)</span><br><span class="line"><span class="keyword">assert</span> p1[<span class="number">1</span>] == <span class="number">1</span> <span class="keyword">and</span> p1[<span class="number">1</span>] == <span class="number">1</span></span><br><span class="line"></span><br><span class="line">phi1 = (p1[<span class="number">0</span>] - <span class="number">1</span>) * p1[<span class="number">0</span>]^<span class="number">3</span> * (q1 - <span class="number">1</span>)</span><br><span class="line">phi2 = (p2[<span class="number">0</span>] - <span class="number">1</span>) * p2[<span class="number">0</span>]^<span class="number">3</span> * (q2 - <span class="number">1</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>解法四：使用格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">e = <span class="number">0x10001</span></span><br><span class="line">pk = </span><br><span class="line">c1, c2 = </span><br><span class="line">n1, n2 = pk</span><br><span class="line"><span class="comment"># n1 / n2 \approx q1 / q2</span></span><br><span class="line"><span class="comment"># let | q1 * n2 - q2 * n2 | = s</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># \approx (n2/(2q2)).nbits() - q2.nbits</span></span><br><span class="line">D = <span class="number">2</span>^(<span class="number">360</span>*<span class="number">4</span>-<span class="number">128</span>-<span class="number">2</span>)</span><br><span class="line">B = matrix(ZZ, [[n2, <span class="number">0</span>], [-n1, D]])</span><br><span class="line">L = B.LLL()</span><br><span class="line">q2 = <span class="built_in">abs</span>(L[<span class="number">0</span>][<span class="number">1</span>] // D)</span><br><span class="line"><span class="keyword">assert</span> n2 % q2 == <span class="number">0</span></span><br><span class="line">p2 = Integer(<span class="built_in">pow</span>(n2//q2, <span class="number">1</span>/<span class="number">4</span>))</span><br><span class="line"><span class="keyword">assert</span> p2^<span class="number">4</span> * q2 == n2</span><br><span class="line"></span><br><span class="line">s = <span class="built_in">abs</span>(L[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>((q2*n1 - s) % n2 == <span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>((q2*n1 + s) % n2 == <span class="number">0</span>)</span><br><span class="line"><span class="keyword">assert</span> (q2*n1 + s) % n2 == <span class="number">0</span></span><br><span class="line">q1 = (q2*n1 + s) // n2</span><br><span class="line"><span class="keyword">assert</span> n1 % q1 == <span class="number">0</span></span><br><span class="line">p1 = Integer(<span class="built_in">pow</span>(n1//q1, <span class="number">1</span>/<span class="number">4</span>))</span><br><span class="line"><span class="keyword">assert</span> p1^<span class="number">4</span> * q1 == n1</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line">m1 = <span class="built_in">pow</span>(c1, e.inverse_mod((p1^<span class="number">3</span> * (p1-<span class="number">1</span>) * (q1-<span class="number">1</span>))), n1)</span><br><span class="line">m2 = <span class="built_in">pow</span>(c2, e.inverse_mod((p2^<span class="number">3</span> * (p2-<span class="number">1</span>) * (q2-<span class="number">1</span>))), n2)</span><br><span class="line">flag1 = libnum.n2s(<span class="built_in">int</span>(m1))</span><br><span class="line">flag2 = libnum.n2s(<span class="built_in">int</span>(m2))</span><br><span class="line"><span class="built_in">print</span>(flag1 + flag2)</span><br></pre></td></tr></table></figure>
+
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>sagemath的使用 | Qwe7sea_Blog</title>
+  <meta name="keywords" content=" Crypto ">
+  <meta name="description" content="sagemath的使用 | Qwe7sea_Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="PHP相关及绕过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP相关及绕过">
+<meta property="og:url" content="http://example.com/2025/05/09/Web/PHP%E7%9B%B8%E5%85%B3%E5%8F%8A%E7%BB%95%E8%BF%87/index.html">
+<meta property="og:site_name" content="Qwe7sea_Blog">
+<meta property="og:description" content="PHP相关及绕过">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-09T02:42:56.659Z">
+<meta property="article:modified_time" content="2025-05-09T02:42:57.168Z">
+<meta property="article:author" content="Qwe7sea">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Qwe7sea</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/Qwe7sea/Qwe7sea.github.io"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(18)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="Web">
+            <i class="fold iconfont icon-right"></i>
+            Web
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="Web&lt;---&gt;php">
+            
+            php
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="密码学">
+            <i class="fold iconfont icon-right"></i>
+            密码学
+            <small>(13)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;对称加密">
+            
+            对称加密
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;非对称加密">
+            
+            非对称加密
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;流密码">
+            
+            流密码
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;数论">
+            
+            数论
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="密码学&lt;---&gt;RSA">
+            
+            RSA
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF比赛">
+            
+            CTF比赛
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="18">
+<input type="hidden" id="yelog_site_word_count" value="33.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://github.com/Qwe7sea/Qwe7sea.github.io">项目地址</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>大整数分解</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>离散对数</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数论</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Coppersmith</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CRT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Crypto</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ECC</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>LCG</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>php</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RSA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>XOR</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 Web php "
+           href="/2025/05/09/Web/PHP%E7%9B%B8%E5%85%B3%E5%8F%8A%E7%BB%95%E8%BF%87/"
+           data-tag="php"
+           data-author="" >
+            <span class="post-title" title="PHP相关及绕过">PHP相关及绕过</span>
+            <span class="post-date" title="2025-05-09 10:42:56">2025/05/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/05/06/Crypto/%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0%E9%97%AE%E9%A2%98/"
+           data-tag="Crypto,离散对数"
+           data-author="" >
+            <span class="post-title" title="离散对数问题">离散对数问题</span>
+            <span class="post-date" title="2025-05-06 15:06:45">2025/05/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 流密码 "
+           href="/2025/04/02/Crypto/LCG%E5%9F%BA%E7%A1%80/"
+           data-tag="Crypto,LCG"
+           data-author="" >
+            <span class="post-title" title="LCG基础">LCG基础</span>
+            <span class="post-date" title="2025-04-02 10:03:31">2025/04/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 CTF比赛 "
+           href="/2025/03/25/Crypto/PolarCTF%E6%98%A5%E5%AD%A3%E8%B5%9B-2025/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="PolarCTF春季赛 2025">PolarCTF春季赛 2025</span>
+            <span class="post-date" title="2025-03-25 09:07:27">2025/03/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/03/10/Crypto/ECC%E5%AF%86%E7%A0%81/"
+           data-tag="Crypto,ECC"
+           data-author="" >
+            <span class="post-title" title="ECC加密解密">ECC加密解密</span>
+            <span class="post-date" title="2025-03-10 10:55:24">2025/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 对称加密 "
+           href="/2025/03/06/Crypto/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"
+           data-tag="Crypto,XOR"
+           data-author="" >
+            <span class="post-title" title="对称加密">对称加密</span>
+            <span class="post-date" title="2025-03-06 17:29:40">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 RSA "
+           href="/2025/03/06/Crypto/%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E6%8E%A8%E5%AF%BC/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="特殊情况推导">特殊情况推导</span>
+            <span class="post-date" title="2025-03-06 10:10:42">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 RSA "
+           href="/2025/03/05/Crypto/%E5%B7%B2%E7%9F%A5%E9%AB%98%E4%BD%8D%E6%94%BB%E5%87%BB/"
+           data-tag="Crypto,Coppersmith"
+           data-author="" >
+            <span class="post-title" title="已知高位攻击">已知高位攻击</span>
+            <span class="post-date" title="2025-03-05 17:04:08">2025/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 CTF比赛 "
+           href="/2025/02/25/Crypto/CryptoCTF-2020/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="CryptoCTF 2020">CryptoCTF 2020</span>
+            <span class="post-date" title="2025-02-25 17:30:35">2025/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/02/25/Crypto/Sagemath%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="sagemath的使用">sagemath的使用</span>
+            <span class="post-date" title="2025-02-25 11:04:12">2025/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/02/13/Crypto/Crypro-CTF%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="Crypro-CTF常见题型">Crypro-CTF常见题型</span>
+            <span class="post-date" title="2025-02-13 16:44:57">2025/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/13/Crypto/%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/"
+           data-tag="Crypto,数论"
+           data-author="" >
+            <span class="post-title" title="离散对数">离散对数</span>
+            <span class="post-date" title="2025-02-13 16:23:22">2025/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/10/Crypto/%E5%90%8C%E4%BD%99%E7%90%86%E8%AE%BA/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="同余理论">同余理论</span>
+            <span class="post-date" title="2025-02-10 11:27:51">2025/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 CTF比赛 "
+           href="/2025/02/08/Crypto/VNCTF%202025/"
+           data-tag="Crypto,CRT"
+           data-author="" >
+            <span class="post-title" title="VNCTF 2025">VNCTF 2025</span>
+            <span class="post-date" title="2025-02-08 11:32:32">2025/02/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 数论 "
+           href="/2025/02/05/Crypto/%E8%BF%9E%E5%88%86%E6%95%B0/"
+           data-tag="Crypto,数论"
+           data-author="" >
+            <span class="post-title" title="连分数">连分数</span>
+            <span class="post-date" title="2025-02-05 11:46:08">2025/02/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 非对称加密 "
+           href="/2025/01/24/Crypto/RSA%E7%9B%B8%E5%85%B3/"
+           data-tag="Crypto,RSA,大整数分解"
+           data-author="" >
+            <span class="post-title" title="RSA加密">RSA加密</span>
+            <span class="post-date" title="2025-01-24 09:56:53">2025/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 密码学 "
+           href="/2025/01/23/Crypto/CTF%E7%AB%9E%E8%B5%9B%E5%AF%86%E7%A0%81%E5%AD%A6%E6%8C%87%E5%8D%97/"
+           data-tag="Crypto"
+           data-author="" >
+            <span class="post-title" title="CTF竞赛密码学指南">CTF竞赛密码学指南</span>
+            <span class="post-date" title="2025-01-23 11:57:56">2025/01/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025/01/22/%E9%83%A8%E7%BD%B2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="部署">部署</span>
+            <span class="post-date" title="2025-01-22 18:26:35">2025/01/22</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Crypto/Sagemath使用学习" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">sagemath的使用</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="密码学">密码学</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Crypto</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2025-02-25 16:57:19'>2025-02-25 11:04</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:3.7k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97"><span class="toc-text">算术运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%91%E4%BC%BC%E9%99%A4%E6%B3%95"><span class="toc-text">近似除法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E9%99%A4"><span class="toc-text">模除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%82%E8%BF%90%E7%AE%97"><span class="toc-text">幂运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%91%E4%B8%8B%E3%80%81%E5%90%91%E4%B8%8A%E5%8F%96%E6%95%B4"><span class="toc-text">向下、向上取整</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B0-%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="toc-text">最大公因数&amp;最小公倍数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95"><span class="toc-text">扩展欧几里得算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%82%E6%A8%A1%E8%BF%90%E7%AE%97"><span class="toc-text">幂模运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E9%80%86%E8%BF%90%E7%AE%97"><span class="toc-text">模逆运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86"><span class="toc-text">中国剩余定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A0%E6%95%B0%E7%9B%B8%E5%85%B3"><span class="toc-text">素数相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E8%A7%A3%E7%9B%B8%E5%85%B3"><span class="toc-text">分解相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E8%A7%A3%E6%96%B9%E7%A8%8B"><span class="toc-text">1.解方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#solve-%E8%A7%A3%E5%8D%95%E4%B8%AA%E6%96%B9%E7%A8%8B"><span class="toc-text">solve()解单个方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#solve-%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">solve()解方程组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E6%96%B9%E7%A8%8B"><span class="toc-text">一元方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%85%83%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">二元方程组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#solve-mod-%E8%A7%A3%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B"><span class="toc-text">solve_mod()解同余方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#solve%E7%A4%BA%E4%BE%8B"><span class="toc-text">solve示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#find-root%E8%A7%A3%E6%96%B9%E7%A8%8B"><span class="toc-text">find_root解方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#roots-%E6%9C%89%E9%99%90%E5%9F%9F%E5%86%85%E8%A7%A3%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="toc-text">roots()有限域内解多项式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#roots-%E8%A7%A3%E6%99%AE%E9%80%9A%E6%96%B9%E7%A8%8B"><span class="toc-text">roots()解普通方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#small-roots-%E8%A7%A3%E6%9C%89%E9%99%90%E5%9F%9F%E5%86%85%E7%9A%84%E6%96%B9%E7%A8%8B"><span class="toc-text">small_roots()解有限域内的方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nth-root"><span class="toc-text">nth_root()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-text">2.代数系统：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="toc-text">多项式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="toc-text">一元多项式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="toc-text">生成随机多项式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E5%A4%9A%E9%A1%B9%E5%BC%8F"><span class="toc-text">多元多项式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P%E5%85%83%E6%9C%89%E9%99%90%E5%9F%9F"><span class="toc-text">P元有限域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pn%E5%85%83%E6%9C%89%E9%99%90%E5%9F%9F"><span class="toc-text">pn元有限域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%8E%AFZmod-n"><span class="toc-text">整数环Zmod(n)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%8E%AF"><span class="toc-text">多项式环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-text">3.线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#solve-right"><span class="toc-text">solve_right</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E6%80%A7%E8%B4%A8"><span class="toc-text">矩阵性质</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E6%95%B0%E8%AE%BA"><span class="toc-text">4.数论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%82%E9%80%86%E5%85%83"><span class="toc-text">求逆元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97"><span class="toc-text">扩展欧几里得</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%EF%BC%88%E5%AD%99%E5%AD%90%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-text">中国剩余定理（孙子算法）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-EllipticCurves"><span class="toc-text">5.EllipticCurves</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h1><h2 id="近似除法"><a href="#近似除法" class="headerlink" title="近似除法"></a>近似除法</h2><p>通常用来在近似计算中将表达式变成实数，损失一定精度，但可以提高计算效率</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(RDF(<span class="number">5</span>/<span class="number">3</span>))<span class="comment">#近似除法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">5</span>/<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.6666666666666667</span></span><br><span class="line"><span class="comment">#5/3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模除"><a href="#模除" class="headerlink" title="模除"></a>模除</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 模除</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">5</span>//<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="幂运算"><a href="#幂运算" class="headerlink" title="幂运算"></a>幂运算</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 幂运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>^<span class="number">3</span>,<span class="number">2</span>**<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#8 8</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="向下、向上取整"><a href="#向下、向上取整" class="headerlink" title="向下、向上取整"></a>向下、向上取整</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#向下、向上取整</span></span><br><span class="line"><span class="built_in">print</span>(floor(<span class="number">5</span>/<span class="number">3</span>),ceil(<span class="number">5</span>/<span class="number">3</span>))</span><br><span class="line"><span class="comment">#1 2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="最大公因数-最小公倍数"><a href="#最大公因数-最小公倍数" class="headerlink" title="最大公因数&amp;最小公倍数"></a>最大公因数&amp;最小公倍数</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 最大公因数&amp;最小公倍数</span></span><br><span class="line"><span class="built_in">print</span>(gcd(<span class="number">6</span>,<span class="number">9</span>),lcm(<span class="number">6</span>,<span class="number">9</span>))</span><br><span class="line"><span class="comment">#3 18</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="扩展欧几里得算法"><a href="#扩展欧几里得算法" class="headerlink" title="扩展欧几里得算法"></a>扩展欧几里得算法</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 扩展欧几里得算法</span></span><br><span class="line">a=<span class="number">6</span></span><br><span class="line">b=<span class="number">9</span></span><br><span class="line">g,s,t=xgcd(a,b)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(g)+<span class="string">&quot;=&quot;</span>+<span class="built_in">str</span>(s)+<span class="string">&quot;*&quot;</span>+<span class="built_in">str</span>(a)+<span class="string">&quot;+&quot;</span>+<span class="built_in">str</span>(t)+<span class="string">&quot;*&quot;</span>+<span class="built_in">str</span>(b))</span><br><span class="line"><span class="comment">#3=-1*6+1*9</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="幂模运算"><a href="#幂模运算" class="headerlink" title="幂模运算"></a>幂模运算</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 幂模运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;17^20200301(mod 105)=&quot;</span>+<span class="built_in">str</span>(power_mod(<span class="number">17</span>,<span class="number">2020301</span>,<span class="number">105</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#17^20200301(mod 105)=47</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模逆运算"><a href="#模逆运算" class="headerlink" title="模逆运算"></a>模逆运算</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 模逆运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;5^-1=&quot;</span>+<span class="built_in">str</span>(inverse_mod(<span class="number">5</span>,<span class="number">14</span>))+<span class="string">&quot;(mod 14)&quot;</span>)</span><br><span class="line"><span class="comment">#5^-1=3(mod 14)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 中国剩余定理</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">x ≡ 1 ( m o d 11 ) </span></span><br><span class="line"><span class="string">x ≡ 2 ( m o d 3 ) </span></span><br><span class="line"><span class="string">x ≡ 3 ( m o d 5 ) </span></span><br><span class="line"><span class="string">x ≡ 4 ( m o d 7 )</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(crt([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">11</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>]))</span><br><span class="line"><span class="comment"># 683</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="素数相关"><a href="#素数相关" class="headerlink" title="素数相关"></a>素数相关</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 判断是否为素数</span></span><br><span class="line"><span class="built_in">print</span>(is_prime(<span class="number">3</span>),is_prime(<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 求第几位素数</span></span><br><span class="line"><span class="built_in">print</span>(nth_prime(<span class="number">1</span>),nth_prime(<span class="number">2</span>),nth_prime(<span class="number">10</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 求小于a的最大素数、大于a的最小素数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;大于10的最小素数:&quot;</span>+<span class="built_in">str</span>(next_prime(<span class="number">10</span>))+<span class="string">&quot;,小于10的最大素数:&quot;</span>+<span class="built_in">str</span>(previous_prime(<span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 前n个素数</span></span><br><span class="line"><span class="built_in">print</span>(primes_first_n(<span class="number">10</span>))<span class="comment">#前十个素数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 区间内的素数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(primes(<span class="number">2</span>,<span class="number">30</span>)))<span class="comment">#区间[2,30)内的素数，左闭右开</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 欧拉函数</span></span><br><span class="line"><span class="built_in">print</span>(euler_phi(<span class="number">31</span>))<span class="comment">#欧拉函数</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分解相关"><a href="#分解相关" class="headerlink" title="分解相关"></a>分解相关</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#分解整数</span></span><br><span class="line"><span class="built_in">print</span>(factor(<span class="number">100</span>))</span><br><span class="line"><span class="comment">#2^2 * 5^2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 仅求出素因子</span></span><br><span class="line"><span class="built_in">print</span>(prime_divisors(<span class="number">100</span>))</span><br><span class="line"><span class="comment">#[2, 5]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 椭圆曲线分解寻找素因子</span></span><br><span class="line"><span class="built_in">print</span>(ecm(<span class="number">1234567</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 二次筛法分解</span></span><br><span class="line"><span class="built_in">print</span>(qsieve(<span class="number">12345678901234567890123456789012345678902</span>))</span><br><span class="line"><span class="comment">#([2, 22, 6418, 70598, 349745854025172608009389976741900498, 3847204394276898688103289744160905478, 1122334445566778899102132435364758698082], &#x27;&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="1-解方程"><a href="#1-解方程" class="headerlink" title="1.解方程"></a>1.解方程</h1><h2 id="solve-解单个方程"><a href="#solve-解单个方程" class="headerlink" title="solve()解单个方程"></a>solve()解单个方程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">var(<span class="string">&#x27;x&#x27;</span>) <span class="comment"># 创建一个名为x的符号变量</span></span><br><span class="line">f = x^<span class="number">3</span>+<span class="number">2</span>*x^<span class="number">2</span> == <span class="number">45</span> <span class="comment"># 相当于x^3+2*x^2-45=0</span></span><br><span class="line">x = solve(f,x)  <span class="comment"># 返回这个方程的所有结果</span></span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[
+x == -1/2*I*sqrt(35) - 5/2,
+x == 1/2*I*sqrt(35) - 5/2,
+x == 3
+]
+</code></pre>
+<h2 id="solve-解方程组"><a href="#solve-解方程组" class="headerlink" title="solve()解方程组"></a>solve()解方程组</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">var(<span class="string">&#x27;p,q,r&#x27;</span>) <span class="comment"># 创建三个名为p q r的符号变量</span></span><br><span class="line">n = <span class="number">105</span></span><br><span class="line">n1 = <span class="number">15</span></span><br><span class="line">n2 = <span class="number">7</span></span><br><span class="line">f1 = p*q*r == n</span><br><span class="line">f2 = p+q+r == n1</span><br><span class="line">f3 = <span class="number">2</span>*p+<span class="number">3</span>*q-<span class="number">4</span>*r == n2</span><br><span class="line">solution = solve([f1,f2,f3],[p,q,r])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;solution = <span class="subst">&#123;solution&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>solution = [
+[p == 1/12*sqrt(35569) + 277/12, q == -1/14*sqrt(35569) - 143/14, r == -1/84*sqrt(35569) + 179/84],
+[p == -1/12*sqrt(35569) + 277/12, q == 1/14*sqrt(35569) - 143/14, r == 1/84*sqrt(35569) + 179/84],
+[p == 3, q == 7, r == 5]
+]
+</code></pre>
+<h3 id="一元方程"><a href="#一元方程" class="headerlink" title="一元方程"></a>一元方程</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = var(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(solve(<span class="number">3</span> * x + <span class="number">5</span> == <span class="number">10</span>, x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = var(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(solve(x ** <span class="number">2</span> + <span class="number">4</span> * x + <span class="number">4</span> == <span class="number">100</span>, x))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>[
+x == (5/3)
+]
+[
+x == -12,
+x == 8
+]
+</code></pre>
+<h3 id="二元方程组"><a href="#二元方程组" class="headerlink" title="二元方程组"></a>二元方程组</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sage.<span class="built_in">all</span> <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">x, y = var(<span class="string">&#x27;x,y&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(solve(x + y == <span class="number">10</span>, x))</span><br><span class="line"><span class="built_in">print</span>(solve(x + y == <span class="number">10</span>, (x, y)))</span><br><span class="line"><span class="built_in">print</span>(solve((x + y == <span class="number">10</span>, x - y == <span class="number">5</span>), (x, y)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>[
+x == -y + 10
+]
+[
+[x == -r1 + 10, y == r1]
+]
+[
+[x == (15/2), y == (5/2)]
+]
+</code></pre>
+<h2 id="solve-mod-解同余方程"><a href="#solve-mod-解同余方程" class="headerlink" title="solve_mod()解同余方程"></a>solve_mod()解同余方程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#2x≡3(mod 7)</span></span><br><span class="line">x = var(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">mod = <span class="number">7</span></span><br><span class="line"><span class="built_in">print</span>(solve_mod(<span class="number">2</span>*x == <span class="number">3</span>, mod))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[(5,)]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x, y = var(<span class="string">&#x27;x,y&#x27;</span>)</span><br><span class="line">mod = <span class="number">7</span></span><br><span class="line"><span class="comment">#2x+y≡3(mod 7)</span></span><br><span class="line"><span class="built_in">print</span>(solve_mod(<span class="number">2</span>*x + y == <span class="number">3</span>, mod))</span><br><span class="line"><span class="built_in">print</span>(solve_mod(<span class="number">2</span>*x + y == <span class="number">3</span>, mod, solution_dict = <span class="literal">True</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#2x+y≡3(mod 7)</span></span><br><span class="line"><span class="comment">#x+3y≡1(mod 7)</span></span><br><span class="line"><span class="built_in">print</span>(solve_mod((<span class="number">2</span>*x + y == <span class="number">3</span>, x + <span class="number">3</span>*y == <span class="number">1</span>), mod))</span><br><span class="line"><span class="built_in">print</span>(solve_mod((<span class="number">2</span>*x + y == <span class="number">3</span>, x + <span class="number">3</span>*y == <span class="number">1</span>), mod, solution_dict = <span class="literal">True</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[(0, 3), (1, 1), (2, 6), (3, 4), (4, 2), (5, 0), (6, 5)]
+[&#123;x: 0, y: 3&#125;, &#123;x: 1, y: 1&#125;, &#123;x: 2, y: 6&#125;, &#123;x: 3, y: 4&#125;, &#123;x: 4, y: 2&#125;, &#123;x: 5, y: 0&#125;, &#123;x: 6, y: 5&#125;]
+[(3, 4)]
+[&#123;x: 3, y: 4&#125;]
+</code></pre>
+<h2 id="solve示例"><a href="#solve示例" class="headerlink" title="solve示例"></a>solve示例</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">var(<span class="string">&#x27;x,y,p,q&#x27;</span>)</span><br><span class="line">eq1 = p+q==<span class="number">9</span> </span><br><span class="line">eq2 = q*y+p*x==-<span class="number">6</span> </span><br><span class="line">eq3 = q*y**<span class="number">2</span>+p*x**<span class="number">2</span>==<span class="number">24</span> </span><br><span class="line">solve([eq1,eq2,eq3,p==<span class="number">1</span>],p,q,x,y) </span><br><span class="line"><span class="comment">#[[p == 1, q == 8, x == -4/3*sqrt(10) - 2/3, y == 1/6*sqrt(10) - 2/3], [p == 1, q == 8, x == 4/3*sqrt(10) - 2/3, y == -1/6*sqrt(10) - 2/3]]</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[[p == 1, q == 8, x == -4/3*sqrt(10) - 2/3, y == 1/6*sqrt(10) - 2/3], [p == 1, q == 8, x == 4/3*sqrt(10) - 2/3, y == -1/6*sqrt(10) - 2/3]]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#要求解的近似值，可以这样：</span></span><br><span class="line">solns = solve([eq1,eq2,eq3,p==<span class="number">1</span>],p,q,x,y, solution_dict=<span class="literal">True</span>) </span><br><span class="line">[[s[p].n(<span class="number">30</span>), s[q].n(<span class="number">30</span>), s[x].n(<span class="number">30</span>), s[y].n(<span class="number">30</span>)] <span class="keyword">for</span> s <span class="keyword">in</span> solns]</span><br><span class="line"><span class="comment">#[[1.0000000, 8.0000000, -4.8830369, -0.13962039],[1.0000000, 8.0000000, 3.5497035, -1.1937129]]</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[[1.0000000, 8.0000000, -4.8830369, -0.13962039],
+ [1.0000000, 8.0000000, 3.5497035, -1.1937129]]
+</code></pre>
+<h2 id="find-root解方程"><a href="#find-root解方程" class="headerlink" title="find_root解方程"></a>find_root解方程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">phi = var(<span class="string">&#x27;phi&#x27;</span>) </span><br><span class="line">find_root(cos(phi)==sin(phi),<span class="number">0</span>,pi/<span class="number">2</span>) <span class="comment">#find_root 在区间 0 &lt; ϕ &lt; π/2 上寻找上述方程的解。</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#0.7853981633974484 </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>0.7853981633974484
+</code></pre>
+<h2 id="roots-有限域内解多项式"><a href="#roots-有限域内解多项式" class="headerlink" title="roots()有限域内解多项式"></a>roots()有限域内解多项式</h2><p>foots()返回多项式的根及其重数。根的重数是根作为解出现的次数。使用参数multiplicities&#x3D;False就不会打印重数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># R = PolynomialRing(QQ, &#x27;x&#x27;)  # Create a polynomial ring over the rational numbers with variable x</span></span><br><span class="line"><span class="comment"># # 等价于 R.&lt;x&gt; = PolynomialRing(QQ)</span></span><br><span class="line"><span class="comment"># f = x^3 - 3*x^2 + 3*x - 1  # Define a polynomial</span></span><br><span class="line"><span class="comment"># print(f.roots())  # Get its roots and their multiplicities</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">R = PolynomialRing(QQ, <span class="string">&#x27;x&#x27;</span>)  <span class="comment"># 创建一个有理数域上的多项式环，变量是 x</span></span><br><span class="line"><span class="comment"># 等价于 R.&lt;x&gt; = PolynomialRing(QQ)</span></span><br><span class="line">x = R.gen()  <span class="comment"># 取多项式环中的生成元</span></span><br><span class="line">f = x^<span class="number">3</span> - <span class="number">3</span>*x^<span class="number">2</span> + <span class="number">3</span>*x - <span class="number">1</span>  <span class="comment"># 定义多项式</span></span><br><span class="line"><span class="built_in">print</span>(f.roots())  <span class="comment"># 获取多项式的根及其重数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>[(1, 3)]
+</code></pre>
+<p>结果为[(1, 3)]，其中1是多项式f的一个根，重数是3。</p>
+<p>QQ代表有理数域，f.roots()返回该多项式在该域中所有的根;ZZ表示整数域。</p>
+<h2 id="roots-解普通方程"><a href="#roots-解普通方程" class="headerlink" title="roots()解普通方程"></a>roots()解普通方程</h2><p>用法和solve()是一致的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">var(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">f = x**<span class="number">2</span>+<span class="number">2</span>*x == <span class="number">15</span></span><br><span class="line">x = f.roots()</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[(3, 1), (-5, 1)]
+</code></pre>
+<h2 id="small-roots-解有限域内的方程"><a href="#small-roots-解有限域内的方程" class="headerlink" title="small_roots()解有限域内的方程"></a>small_roots()解有限域内的方程</h2><p>small_roots()是SageMath中一个运用了coppersmith定理的函数。它只能解有限域内的方程。</p>
+<p>small_soots()主要用于有限域中寻找小根（一些绝对值比较小的根）<br>small_roots(X &#x3D; ,beta &#x3D; )有两个参数，X代表所需要求解根的上限，一般来说取在给定条件下的最大求解上限；beta代表了所寻找的根的预期大小和可能的最大大小之间的比例.当p,q二进制位数相同时一般只能取0.4；如果p,q二进制位数不同，就要具体分析</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = <span class="number">108960799213330048807537253155955524262938083957673388027650083719597357215238547761557943499634403020900601643719960988288543702833581456488410418793239589934165142850195998163833962875355916819854378922306890883033496525502067124670576471251882548376530637034077</span></span><br><span class="line">e = <span class="number">3359917755894163258174451768521610910491402727660720673898848239095553816126131162471035843306464197912997253011899806560624938869918893182751614520610693643690087988363775343761651198776860913310798127832036941524620284804884136983215497742441302140070096928109039</span></span><br><span class="line">R.&lt;d&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">f = e*d - <span class="number">251</span></span><br><span class="line">res = f.monic().small_roots(X = <span class="number">2</span>^<span class="number">256</span>,beta = <span class="number">0.44</span>)  <span class="comment"># d = random.getrandbits(256)</span></span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[39217838246811431279243531729119914044224429322696785472959081158748864949269]
+</code></pre>
+<p>roots()和small_roots()的区别在于前者返回所有根，运算速度较慢；而后者返回一些较小的根，运算速度较快一些，且使用small_roots()时多项式必须首一化。</p>
+<h2 id="nth-root"><a href="#nth-root" class="headerlink" title="nth_root()"></a>nth_root()</h2><p>nth_root(r,all &#x3D; True)通常配合着整数环使用，结果返回在整数环中所有的r次方根。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = <span class="number">17</span>  <span class="comment"># 选择一个模数</span></span><br><span class="line">R = Zmod(n) <span class="comment"># 创建一个模n的整数环</span></span><br><span class="line">m = <span class="number">4</span></span><br><span class="line">element = R(m) <span class="comment"># 相当于element = m mod n</span></span><br><span class="line"></span><br><span class="line">roots = element.nth_root(<span class="number">100</span>, <span class="built_in">all</span>=<span class="literal">True</span>) <span class="comment"># 返回x^100 = m mod n的所有根</span></span><br><span class="line"><span class="built_in">print</span>(roots)</span><br><span class="line"></span><br><span class="line"><span class="comment"># [10, 11, 7, 6]</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string"># 等价于</span></span><br><span class="line"><span class="string">n = 17  # 选择一个模数</span></span><br><span class="line"><span class="string">m = 4</span></span><br><span class="line"><span class="string">roots = Zmod(n)(m).nth_root(100,all = True)</span></span><br><span class="line"><span class="string">print(roots)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>[10, 11, 7, 6]
+
+
+
+
+
+&#39;\n# 等价于\nn = 17  # 选择一个模数\nm = 4\nroots = Zmod(n)(m).nth_root(100,all = True)\nprint(roots)\n&#39;
+</code></pre>
+<h1 id="2-代数系统："><a href="#2-代数系统：" class="headerlink" title="2.代数系统："></a>2.代数系统：</h1><ul>
+<li>整数环 {…,−1,0,1,2,…}, Sage 中叫 ZZ;</li>
+<li>有理数环 ，即整数构成的分数，Sage 中叫 QQ;</li>
+<li>实数环，Sage 中叫 RR;</li>
+<li>复数环，Sage 中叫 CC；</li>
+</ul>
+<p>ratpoly.<t> &#x3D; PolynomialRing(QQ)<br>ratpoly是集合的名字，自己定义<br>.<t>是变量的名字，自己定义</p>
+<p>PolynomialRing()是环</p>
+<p>有限域还有：GF(2)、GF(2^8,modulus&#x3D;[1,0,0,1,1,1,0,0,1])等</p>
+<h2 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">F.&lt;x&gt; = GF(<span class="number">2</span>^<span class="number">8</span>,modulus=[<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>]) </span><br><span class="line">F.fetch_int(<span class="number">21</span>) == F(<span class="number">21.</span>bits())</span><br><span class="line">F(<span class="number">21.</span>bits()).integer_representation() <span class="comment">#逆过程</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>21
+</code></pre>
+<h3 id="一元多项式"><a href="#一元多项式" class="headerlink" title="一元多项式"></a>一元多项式</h3><p>R &#x3D; PolynomialRing(QQ, ‘t’)<br>R &#x3D; QQ[‘t’]<br>R.<t> &#x3D; PolynomialRing(QQ)<br>R.<t> &#x3D; QQ[‘t’]<br>R.<t> &#x3D; QQ[]</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">R.&lt;t&gt; = QQ[]</span><br><span class="line">f = <span class="number">2</span>*t^<span class="number">7</span> +<span class="number">3</span>*t^<span class="number">2</span> -<span class="number">15</span>/<span class="number">19</span></span><br><span class="line">f^<span class="number">2</span></span><br><span class="line"><span class="comment"># 4*t^14 + 12*t^9 - 60/19*t^7 + 9*t^4 - 90/19*t^2 + 225/361</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>4*t^14 + 12*t^9 - 60/19*t^7 + 9*t^4 - 90/19*t^2 + 225/361
+</code></pre>
+<h3 id="生成随机多项式"><a href="#生成随机多项式" class="headerlink" title="生成随机多项式"></a>生成随机多项式</h3><p>R.<y> &#x3D; PolynomialRing(GF(p))<br>S &#x3D; R.random_element(degree)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S = R.random_element(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(S)</span><br></pre></td></tr></table></figure>
+
+<pre><code>-77*t^5 - 4/5*t^3 + t^2 + 1/2*t + 1/4
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.coefficients() <span class="comment">#多项式的系数</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[1/4, 1/2, 1, -4/5, -77]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.is_irreducible() <span class="comment">#检测多项式是否不可约</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">RS = R.quotient(S) <span class="comment">#把多项式每一项的模数由p转变为S对应项的系数</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">R([<span class="number">111</span>,<span class="number">222</span>]) <span class="comment">#将整数列表转为多项式对应项的系数（阶递增）</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>222*t + 111
+</code></pre>
+<h3 id="多元多项式"><a href="#多元多项式" class="headerlink" title="多元多项式"></a>多元多项式</h3><p>跟定义一元多项式一样，定义多元多项式也有多种方法：<br>GF(5)[‘z0, z1, z2’]<br>R.&lt;z0,z1,z2&gt; &#x3D; GF(5)[]<br>PolynomialRing(GF(5), 3, ‘xyz’)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">R.&lt;x,y&gt; = RationalField()[]</span><br><span class="line">f = (x^<span class="number">3</span> +<span class="number">2</span>*y^<span class="number">2</span>*x)^<span class="number">2</span></span><br><span class="line">g = x^<span class="number">2</span>*y^<span class="number">2</span></span><br><span class="line">f.gcd(g) <span class="comment">#等价于gcd(f,g)</span></span><br><span class="line"><span class="comment"># x^2</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>x^2
+</code></pre>
+<h2 id="P元有限域"><a href="#P元有限域" class="headerlink" title="P元有限域"></a>P元有限域</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 有限域z7</span></span><br><span class="line">k1=GF(<span class="number">7</span>)</span><br><span class="line"><span class="comment"># 求解 x^5 ≡ 2 (mod 7 ) 和 x^2 ≡ 2 (mod 7 )</span></span><br><span class="line"><span class="built_in">print</span>(k1(<span class="number">2</span>).nth_root(<span class="number">5</span>),k1(<span class="number">2</span>).sqrt(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># z7的模多项式，以及其根</span></span><br><span class="line"><span class="built_in">print</span>(k1.modulus(),k1.gen())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用本原多项式生成 z7</span></span><br><span class="line">k2=GF(<span class="number">7</span>,modulus=<span class="string">&#x27;primitive&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(k2.modulus(),k2.gen())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>4 3
+x + 6 1
+x + 4 3
+</code></pre>
+<h2 id="pn元有限域"><a href="#pn元有限域" class="headerlink" title="pn元有限域"></a>pn元有限域</h2><p>定义一个 z 7 3 z^{7^3} z73的有限域，以及对应的本原多项式、本原多项式的根、有限域元素个数、元素的阶</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">k1.&lt;x&gt;=GF(<span class="number">7</span>^<span class="number">3</span>,modulus=<span class="string">&#x27;primitive&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(k1.modulus())</span><br><span class="line"><span class="built_in">print</span>(k1.gen())</span><br><span class="line"><span class="built_in">print</span>(k1.order())</span><br><span class="line"><span class="built_in">print</span>((x+<span class="number">2</span>).multiplicative_order())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>x^3 + 6*x^2 + 4
+x
+343
+19
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在有限域中计算 x^100</span></span><br><span class="line"><span class="built_in">print</span>(x^<span class="number">100</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>2*x^2 + x + 4
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 指定不可约多项式生成有限域，如x^3+2*x^2+1 x3+2∗x2+1</span></span><br><span class="line">k2.&lt;a&gt;=GF(<span class="number">7</span>^<span class="number">3</span>,modulus=[<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>])<span class="comment">#低次写到高次的系数</span></span><br><span class="line"><span class="built_in">print</span>(k2.modulus())</span><br><span class="line"><span class="built_in">print</span>(k2.gen())</span><br><span class="line"><span class="built_in">print</span>(k2.order())</span><br><span class="line"><span class="built_in">print</span>((a+<span class="number">2</span>).multiplicative_order())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>x^3 + 2*x^2 + 1
+a
+343
+38
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 计算极小多项式，可通过列表获取系数</span></span><br><span class="line"><span class="built_in">print</span>(a^<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>((a^<span class="number">100</span>).minimal_polynomial())</span><br><span class="line"><span class="built_in">print</span>((a^<span class="number">100</span>).minimal_polynomial()[<span class="number">0</span>],(a^<span class="number">100</span>).minimal_polynomial()[<span class="number">1</span>])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>2*a^2 + 5*a + 4
+x^3 + 4*x^2 + 4*x + 6
+6 4
+</code></pre>
+<h2 id="整数环Zmod-n"><a href="#整数环Zmod-n" class="headerlink" title="整数环Zmod(n)"></a>整数环Zmod(n)</h2><p>Zmod(n)定义了一个模数n的整数环。可以理解为是一个集合，其中的元素都是模n下的余数，即都属于[0,n-1]这个范围。</p>
+<p>整数环的定义:<br>r&#x3D;Zmod(26)<br>r&#x3D;Integers(26)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">R = Zmod(<span class="number">5</span>)   <span class="comment"># 创建一个模 5 的整数环</span></span><br><span class="line">a = R(<span class="number">3</span>)      <span class="comment"># 创建一个模 5 下的元素，其值为 3</span></span><br><span class="line">b = R(<span class="number">4</span>)      <span class="comment"># 创建一个模 5 下的元素，其值为 4</span></span><br><span class="line"></span><br><span class="line">c = a + b     <span class="comment"># 在模 5 下进行加法运算</span></span><br><span class="line"><span class="built_in">print</span>(c)      <span class="comment"># 输出结果为 2</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 求逆、求离散对数、判断是否平方元、求平方根</span></span><br><span class="line">a^-<span class="number">1</span>,a.log(<span class="number">7</span>),a.is_square(),a.sqrt()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(3, 4, True, 3)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 求a的乘法阶和加法阶</span></span><br><span class="line">a.multiplicative_order(),a.additive_order()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(3, 26)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 求a的极小多项式</span></span><br><span class="line"><span class="built_in">print</span>(a.minimal_polynomial())</span><br></pre></td></tr></table></figure>
+
+<pre><code>x + 17
+</code></pre>
+<h2 id="多项式环"><a href="#多项式环" class="headerlink" title="多项式环"></a>多项式环</h2><p>定义多项式的方式：<br>g&#x3D;3<em>x^2+2</em>x+1   #直接定义<br>s&#x3D;R([1,2,3])   #使用列表定义</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">R.&lt;x&gt;=ZZ[]<span class="comment">#定义R为整系数上的多项式环，文字为x</span></span><br><span class="line">f=<span class="number">4</span>*x^<span class="number">2</span>+<span class="number">4</span>*x+<span class="number">1</span><span class="comment">#定义f为整系数一元多项式</span></span><br><span class="line"><span class="built_in">print</span>(f.is_irreducible(),f.factor())<span class="comment">#判断一元多项式是否可约</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>False (2*x + 1)^2
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(f.factor_mod(<span class="number">3</span>)) <span class="comment">#模除多项式</span></span><br><span class="line"><span class="built_in">print</span>(f.roots())  <span class="comment">#查找多项式的整数解</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#环上的多项式</span></span><br><span class="line">R.&lt;x&gt;=Zmod(<span class="number">26</span>)[]<span class="comment">#定义R为Z26上的环，文字为x</span></span><br><span class="line">f=(x+<span class="number">1</span>)*(x^<span class="number">3</span>+x+<span class="number">1</span>)<span class="comment">#定义环上的一个多项式f</span></span><br><span class="line"><span class="built_in">print</span>(f)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;多项式的次数:&quot;</span>,f.degree())<span class="comment">#多项式的次数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;多项式的值:&quot;</span>,f(<span class="number">7</span>))<span class="comment">#多项式的值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;幂运算:&quot;</span>,f^<span class="number">2</span>)<span class="comment">#幂运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最高公因式:&quot;</span>,f.gcd(x+<span class="number">1</span>))<span class="comment">#最高公因式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;扩展欧几里得算法:&quot;</span>,f.xgcd(x+<span class="number">1</span>))<span class="comment">#扩展欧几里得算法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;带余除法:&quot;</span>,f.quo_rem(<span class="number">3</span>*x-<span class="number">1</span>))<span class="comment">#带余除法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;模运算:&quot;</span>,f%(<span class="number">3</span>*x-<span class="number">1</span>))<span class="comment">#模运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;整除:&quot;</span>,f//(<span class="number">3</span>*x-<span class="number">1</span>))<span class="comment">#整除</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>x^4 + x^3 + x^2 + 2*x + 1
+多项式的次数: 4
+多项式的值: 0
+幂运算: x^8 + 2*x^7 + 3*x^6 + 6*x^5 + 7*x^4 + 6*x^3 + 6*x^2 + 4*x + 1
+最高公因式: x + 1
+扩展欧几里得算法: (x + 1, 0, 1)
+带余除法: (9*x^3 + 12*x^2 + 13*x + 5, 6)
+模运算: 6
+整除: 9*x^3 + 12*x^2 + 13*x + 5
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#域上的多项式</span></span><br><span class="line">R.&lt;x&gt;=Zmod(<span class="number">13</span>)[]<span class="comment">#定义R为Z13上的环，文字为x  与GF(13)相同</span></span><br><span class="line"><span class="comment">#R.&lt;x&gt;=GF(13)[]  等价定义</span></span><br><span class="line">f=(x+<span class="number">1</span>)*(x^<span class="number">3</span>+x+<span class="number">1</span>)<span class="comment">#定义环上的一个多项式f</span></span><br><span class="line"><span class="built_in">print</span>(f.is_irreducible(),f.factor())<span class="comment">#判断多项式是否可约，多项式因式分解</span></span><br><span class="line"><span class="built_in">print</span>(f.roots())<span class="comment">#多项式求根，以及重数</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>False (x + 1) * (x + 6) * (x^2 + 7*x + 11)
+[(12, 1), (7, 1)]
+</code></pre>
+<h1 id="3-线性代数"><a href="#3-线性代数" class="headerlink" title="3.线性代数"></a>3.线性代数</h1><h2 id="solve-right"><a href="#solve-right" class="headerlink" title="solve_right"></a>solve_right</h2><p>使用方法 solve_right :执行 A.solve_right(Y) 返回一个矩阵（或向量）X 满 足 AX &#x3D; Y</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = Matrix([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>]]) </span><br><span class="line">Y = vector([<span class="number">0</span>, -<span class="number">4</span>, -<span class="number">1</span>]) </span><br><span class="line">X = A.solve_right(Y) </span><br><span class="line"><span class="built_in">print</span>(X)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 反斜杠 \ 可以代替 solve_right; 用 A \ Y 代替 A.solve_right(Y).</span></span><br><span class="line">A \ Y</span><br></pre></td></tr></table></figure>
+
+<pre><code>(-2, 1, 0)
+
+
+
+
+
+(-2, 1, 0)
+</code></pre>
+<p>类似的，使用 A.solve_left(Y) 求解满足 XA &#x3D; Y 的 X。</p>
+<h2 id="矩阵性质"><a href="#矩阵性质" class="headerlink" title="矩阵性质"></a>矩阵性质</h2><p>矩阵所在的环影响它的性质。<br>matrix 命令中的第一个参数告诉 Sage 这个矩阵 是整数环 (ZZ) 上的，有理数环 (QQ) 上的，还是实数环 (RR) 上的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">AZ = matrix(ZZ, [[<span class="number">2</span>,<span class="number">0</span>], [<span class="number">0</span>,<span class="number">1</span>]]) </span><br><span class="line">AQ = matrix(QQ, [[<span class="number">2</span>,<span class="number">0</span>], [<span class="number">0</span>,<span class="number">1</span>]]) </span><br><span class="line">AR = matrix(RR, [[<span class="number">2</span>,<span class="number">0</span>], [<span class="number">0</span>,<span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = Matrix(<span class="number">3</span>,<span class="built_in">range</span>(<span class="number">9</span>))<span class="comment">#新建一个3*3的矩阵A</span></span><br><span class="line"><span class="built_in">print</span>(A)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[0 1 2]
+[3 4 5]
+[6 7 8]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A.echelon_form() <span class="comment">#A的阶梯形式</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[ 3  0 -3]
+[ 0  1  2]
+[ 0  0  0]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A.T == A.transpose()<span class="comment">#A的转置矩阵</span></span><br><span class="line"><span class="comment"># print(A.transpose())</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A.rows()<span class="comment">#A的行向量</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[(0, 1, 2), (3, 4, 5), (6, 7, 8)]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A.columns()<span class="comment">#A的列向量</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[(0, 3, 6), (1, 4, 7), (2, 5, 8)]
+</code></pre>
+<h1 id="4-数论"><a href="#4-数论" class="headerlink" title="4.数论"></a>4.数论</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">R = IntegerModRing(<span class="number">97</span>) <span class="keyword">or</span> R = Zmod(<span class="number">97</span>)  <span class="comment">#  定义模数为97的环</span></span><br><span class="line">a = R(<span class="number">2</span>) / R(<span class="number">3</span>)                         <span class="comment">#  环上的除法</span></span><br><span class="line">a.is_square()                           <span class="comment">#  是否为二次剩余</span></span><br><span class="line">gcd(<span class="number">3</span>,<span class="number">2</span>)                                <span class="comment">#  最大公因数</span></span><br><span class="line">factorial(<span class="number">5</span>)                            <span class="comment">#  阶乘</span></span><br><span class="line">next_prime()                            <span class="comment">#  后一个素数</span></span><br><span class="line">previous_prime()                        <span class="comment">#  前一个素数</span></span><br><span class="line">divisors()                              <span class="comment">#  所有因子</span></span><br><span class="line">sigma(n,k)                              <span class="comment">#  n的所有因子的k次幂之和</span></span><br><span class="line">inverse_mod(a,n)                        <span class="comment">#  求逆</span></span><br><span class="line">euler_phi(n)                            <span class="comment">#  求n的欧拉函数 phi = n*prod([1 - 1/p for p in prime divisors(n)]);</span></span><br><span class="line">crt(m1,m2,n1,n2)                        <span class="comment">#  中国剩余定理 【x % n1 = m1; x % n2 = m3】</span></span><br><span class="line">d,u,v=xgcd(<span class="number">20</span>,<span class="number">30</span>)                       <span class="comment">#  扩展欧几里得算法</span></span><br></pre></td></tr></table></figure>
+
+<p> #两种因式分解<br>factor(1024) -&gt; 2^10<br>prime_divisors(1024) -&gt; [2]</p>
+<p>#有限域下开根<br>R.<X> &#x3D; PolynomialRing(Zmod(p))<br>f &#x3D; x^256 - c<br>f.monic().roots()</p>
+<p>#求模取根<br>x&#x3D;mod(5,41)<br>r&#x3D;x.nth_root(22)</p>
+<p>#求离散对数<br>x&#x3D;discrete_log(mod(13,23),mod(2,23))   #  或discrete_log(13,mod(2,23))</p>
+<p>#素数分布（Pi(x)）<br>result&#x3D;prime_pi(1000)&#x2F;(1000&#x2F;log(1000))<br>result.numerical_approx() #1.16050288686900</p>
+<h2 id="求逆元"><a href="#求逆元" class="headerlink" title="求逆元"></a>求逆元</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">inv=inverse_mod(<span class="number">30</span>,<span class="number">1373</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="number">30</span> * inv % <span class="number">1373</span>) <span class="comment">#1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;30在模1373下的逆元是：&quot;</span>,inv)</span><br></pre></td></tr></table></figure>
+
+<pre><code>1
+30在模1373下的逆元是： 595
+</code></pre>
+<h2 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">d,u,v=xgcd(<span class="number">20</span>,<span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;d:&#123;0&#125; u:&#123;1&#125; v:&#123;2&#125;&quot;</span>.<span class="built_in">format</span>(d,u,v))<span class="comment">#d:10 u:-1 v:1</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>d:10 u:-1 v:1
+</code></pre>
+<h2 id="中国剩余定理（孙子算法）"><a href="#中国剩余定理（孙子算法）" class="headerlink" title="中国剩余定理（孙子算法）"></a>中国剩余定理（孙子算法）</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">chinese_remainder</span>(<span class="params">modulus, remainders</span>):</span><br><span class="line">    Sum = <span class="number">0</span></span><br><span class="line">    prod = reduce(<span class="keyword">lambda</span> a, b: a*b, modulus)</span><br><span class="line">    <span class="keyword">for</span> m_i, r_i <span class="keyword">in</span> <span class="built_in">zip</span>(modulus, remainders):</span><br><span class="line">        p = prod // m_i</span><br><span class="line">        Sum += r_i * (inverse_mod(p,m_i)*p)</span><br><span class="line">    <span class="keyword">return</span> Sum % prod</span><br><span class="line">chinese_remainder([<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>]) </span><br><span class="line"><span class="comment">#23</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="5-EllipticCurves"><a href="#5-EllipticCurves" class="headerlink" title="5.EllipticCurves"></a>5.EllipticCurves</h1><p>EllipticCurve(R, [a1, a2, a3, a4, a6]) </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ecc = EllipticCurve(GF(q), [a,b]) <span class="comment">#初始化一条线</span></span><br><span class="line">G = ecc(x,y) <span class="comment">#选定其上的一个点</span></span><br><span class="line">G.order() <span class="comment">#G点的阶</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
